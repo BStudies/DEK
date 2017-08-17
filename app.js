@@ -74,6 +74,8 @@ const authRoutes = require('./routes/auth-routes');
 app.use('/auth', authRoutes);
 
 
+
+
 app.get('*', (req, res) => {
   res.status(404).json({
     message: 'Invalid route!',
