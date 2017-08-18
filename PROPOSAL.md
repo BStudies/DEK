@@ -19,20 +19,23 @@ Cards can also be deleted, or edited and updated.
 
 ## Wireframes
 
-Welcome screen - User can login or register
+### Welcome screen - User can login or register
 ![img1](./images/1.jpg)
 
-Register
+### Register
+
 ![img2](images/2.jpg)
 
-Creating a New Flash Card
+### Creating a New Flash Card
+
 ![img3](images/3.jpg)
 ![img4](images/4.jpg)
 ![img5](images/5.jpg)
 ![img6](images/6.jpg)
 ![img7](images/7.jpg)
 
-Taking the Quiz
+### Taking the Quiz
+
 ![img8](images/8.jpg)
 ![img9](images/9.jpg)
 ![img10](images/10.jpg)
