@@ -23,21 +23,23 @@ Welcome screen - User can login or register
 ![img1](./images/1.jpg)
 
 Register
-[ADD WIREFRAME](images/2.jpg)
+![img2](images/2.jpg)
 
 Creating a New Flash Card
-[ADD WIREFRAME](images/3.jpg)
-[ADD WIREFRAME](images/4.jpg)
-[ADD WIREFRAME](images/5.jpg)
-[ADD WIREFRAME](images/6.jpg)
-[ADD WIREFRAME](images/7.jpg)
-[ADD WIREFRAME](images/8.jpg)
-[ADD WIREFRAME](images/9.jpg)
-[ADD WIREFRAME](images/10.jpg)
-[ADD WIREFRAME](images/11.jpg)
-[ADD WIREFRAME](images/12.jpg)
-[ADD WIREFRAME](images/13.jpg)
-[ADD WIREFRAME](images/14.jpg)
+![img3](images/3.jpg)
+![img4](images/4.jpg)
+![img5](images/5.jpg)
+![img6](images/6.jpg)
+![img7](images/7.jpg)
+
+Taking the Quiz
+![img8](images/8.jpg)
+![img9](images/9.jpg)
+![img10](images/10.jpg)
+![img11](images/11.jpg)
+![img12](images/12.jpg)
+![img13](images/13.jpg)
+![img14](images/14.jpg)
 
 
 
