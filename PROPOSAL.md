@@ -20,7 +20,7 @@ Cards can also be deleted, or edited and updated.
 ## Wireframes
 
 Welcome screen - User can login or register
-(./images/1.jpg)
+![img1](./images/1.jpg)
 
 Register
 [ADD WIREFRAME](images/2.jpg)
