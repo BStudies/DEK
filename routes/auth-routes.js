@@ -57,8 +57,12 @@ authRouter.get('/failure', (req, res) => {
 
 authRouter.get('/logout', (req, res) => {
     req.logout();
-    res.redirect('/');
-});
+    res.json({
+      message: 'logged out',
+      auth: false,
+    })
+  });
+  
 
 
 
