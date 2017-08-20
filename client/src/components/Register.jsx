@@ -27,7 +27,7 @@ class Register extends Component{
                 onChange={(e)=>this.handleInputChange(e)}/>
                 <input type="password" name='password' placeholder='Password'
                 onChange={(e)=>this.handleInputChange(e)}/>
-                <input onClick={(e)=>this.handleRegister(e, this.state)} type="submit" value='Submit'/>
+                <input onClick={(e)=>this.props.handleRegisterSubmit(e, this.state)} type="submit" value='Submit'/>
             </form>
         )
     }
