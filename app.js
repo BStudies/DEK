@@ -53,9 +53,20 @@ app.use(passport.session());
 
 
 
-app.get('/', (req, res)=>{
+//routes
 
+app.get('/', (req, res) => {
+  res.sendFile(path.join(__dirname, 'client', 'build', 'index.html'));
 });
+
+const authRoutes = require('./routes/auth-routes.js');
+app.use('/auth', authRoutes);
+// const cardRoutes = require('./routes/card-routes');
+// app.use('/cards', cardRoutes);
+const userRoutes = require('./routes/user-routes');
+app.use('/user', userRoutes);
+
+
 
 
 app.get('/logout', function(req, res){
