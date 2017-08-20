@@ -23,9 +23,9 @@ class Login extends Component{
         return(
             <form action="/login" method='POST'>
                 <input type="text" name='userName' placeholder='User Name'
-                onClick={(e)=>this.handleInputChange(e)}/>
+                onChange={(e)=>this.handleInputChange(e)}/>
                 <input type="password" name='password' placeholder='Password'
-                onClick={(e)=>this.handleInputChange(e)}/>
+                onChange={(e)=>this.handleInputChange(e)}/>
                 <input onClick={(e)=>this.handleLogin(e)} type="submit" value='Submit'/>
             </form>   
         )
