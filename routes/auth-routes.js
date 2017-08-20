@@ -29,11 +29,13 @@ authRouter.post('/register', usersController.create, (req, res) => {
 });
 
 
+
 authRouter.post('/login', passport.authenticate('local', {
-    successRedirect: '/user',
-    failureRedirect: '/auth/login',
+    successRedirect: '/auth/success', 
+    failureRedirect: '/auth/failure',
     failureFlash: true,
-}));
+  })
+);
 
 
 
