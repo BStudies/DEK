@@ -1,19 +1,72 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
+import {BrowserRouter as Router, Route} from 'react-router-dom';
+
+import Header from './components/Header';
+import Footer from './components/Footer';
+
+import Welcome from './components/Welcome';
+import Register from './components/Register';
+import Login from './components/Login';
+import axios from 'axios';
 
 class App extends Component {
+
+
+  handleLoginSubmit = (e, username, password) => {
+    e.preventDefault();
+    axios.post('/auth/login', {
+      username,
+      password,
+    }).then(res => {
+      this.setState({
+        auth: res.data.auth,
+        user: res.data.user,
+        currentPage: 'home',
+      });
+    }).catch(err => console.log(err));
+  }
+
+
+  // options are firstName, lastName, userName, email, password
+  handleRegisterSubmit = (e, options) => {
+    e.preventDefault();
+    axios.post('/auth/register', {
+      options
+    }).then(res => {
+      this.setState({
+        auth: res.data.auth,
+        user: res.data.user,
+        currentPage: 'home',
+      });
+    }).catch(err => console.log(err));
+  }
+
+
+
+  logOut() {
+    axios.get('/auth/logout')
+      .then(res => {
+        this.setState({
+          auth: false,
+          currentPage: 'home',
+        })
+      }).catch(err => console.log(err));
+  }
+
   render() {
     return (
-      <div className="App">
-        <div className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h2>Welcome to React</h2>
+      <Router>
+        <div className="App">
+          <Header />
+          <div className="main">
+            <Route exact path="/" component={Welcome} />
+            <Route exact path="/register" component={Register} />
+            <Route exact path="/login" component={Login} />
+          </div>
+          <Footer />
         </div>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-      </div>
+      </Router>
     );
   }
 }
