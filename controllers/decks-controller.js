@@ -1,18 +1,13 @@
-const Dek = require('../models/routinedek.js');
-const routineController = {};
-
-
-
-
-
+const Deck = require('../models/deck.js');
+const deckController = {};
 
 routineController.create = (req, res) => {
-    Dek.create({
+    Deck.create({
         question: req.body.question,
         answer: req.body.answer,
     })
-    .then(routine => {
-        console.log(`Created ${routine} in routine-cont`)
+    .then(decks => {
+        console.log(`Created ${decks} in decks-cont`)
     })
     .catch(err => {
         console.log(err);
