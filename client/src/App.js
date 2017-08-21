@@ -12,6 +12,7 @@ import Login from './components/Login';
 import Main from './components/Main';
 import NameDeck from './components/NameDeck';
 
+
 import axios from 'axios';
 
 class App extends Component {
@@ -37,13 +38,14 @@ class App extends Component {
     e.preventDefault();
     axios.post('/auth/register', {
       options
-    }).then(res => {
+    })
+    .then(res => {
+      this.setState(options)
       this.setState({
-        auth: res.data.auth,
-        user: res.data.user,
         currentPage: 'home',
       });
-    }).catch(err => console.log(err));
+    })
+    .catch(err => console.log(err));
   }
 
   logOut() {
@@ -62,9 +64,9 @@ class App extends Component {
         <div className="App">
           <Header />
           <div className="main">
-            <Route exact path="/" component={Welcome} />
-            <Route exact path="/register" component={Register} />
-            <Route exact path="/login" component={Login} />
+            <Route exact path="/" render={() => <Welcome />} />
+            <Route exact path="/register" render={() => <Register handleRegisterSubmit={this.handleRegisterSubmit} />} />
+            <Route exact path="/login" render={() => <Login handleLoginSubmit={this.handleLoginSubmit} />} />
             <Route exact path="/main" component={Main} />
             <Route exact path="/namedeck" component={NameDeck} />
           </div>
