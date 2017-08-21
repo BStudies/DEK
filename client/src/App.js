@@ -74,7 +74,6 @@ class App extends Component {
             <Route exact path="/pickquiztype" component={PickQuizType} />
 
           </div>
-          <Footer />
         </div>
       </Router>
     );
