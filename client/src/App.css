@@ -50,50 +50,12 @@ table {
 /*  ---------------- GENERAL  ---------------- */
 
 
-.header {
-  display: flex;
-  justify-content: center;
-  height: 15vh;
-  background-color: teal;
-}
-
-.main {
-  display: flex;
-  justify-content: center;
-  height: 75vh;
-  font-size: 20px;
-}
-
-.footer {
-  display: flex;
-  justify-content: center;
-  height: 10vh;
-  background-color: black;
-  color: white;
-}
-
-h1 {
-  font-size: 40px;
-}
-
-h2 {
-  font-size: 30px;
-}
-
-h3 {
-  font-size: 25px;
-}
-
-p {
-  font-size: 20px;
-}
 
 .welcome {
 
 }
 
 .auth-buttons {
-  font-size: 20px;
 }
 
 .main-menu {
