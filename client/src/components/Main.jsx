@@ -7,9 +7,9 @@ const Main = () => {
     <div className='main-menu'>
       <h2>Main Menu</h2>
       <div className='menu-buttons'>
-        <button>Create Card</button>
-        <button>Take Quiz</button>
-        <button>Edit Cards</button>
+        <button className='menu-button'>Create Card</button>
+        <button className='menu-button'>Take Quiz</button>
+        <button className='menu-button'>Edit Cards</button>
       </div>
     </div>
     )
