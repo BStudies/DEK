@@ -9,6 +9,7 @@ const NameDeck = () => {
       <div className='name-deck-form'>
         <form action="/register" method='POST'>
           <input type="text" name='dekname' placeholder='Type Name Here' />
+          <button className="namedeck-button">Enter</button>
         </form>
       </div>
     </div>

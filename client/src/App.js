@@ -10,6 +10,7 @@ import Register from './components/Register';
 import Login from './components/Login';
 
 import Main from './components/Main';
+import NameDeck from './components/NameDeck';
 
 import axios from 'axios';
 
@@ -45,8 +46,6 @@ class App extends Component {
     }).catch(err => console.log(err));
   }
 
-
-
   logOut() {
     axios.get('/auth/logout')
       .then(res => {
@@ -67,6 +66,7 @@ class App extends Component {
             <Route exact path="/register" component={Register} />
             <Route exact path="/login" component={Login} />
             <Route exact path="/main" component={Main} />
+            <Route exact path="/namedeck" component={NameDeck} />
           </div>
           <Footer />
         </div>
