@@ -11,12 +11,12 @@ const QuizScreen = () => {
         </div>
 
         <div className="flip-card">
-          <button className="flip-card">Flip</button>
+          <button className="flip-card-button">Flip</button>
         </div>
 
         <div className="edit-delete">
-          <button className="edit-card">Edit</button>
-          <button className="delete-card">Delete</button>
+          <button className="edit-card-button">Edit</button>
+          <button className="delete-card-button">Delete</button>
         </div>
       </div>
 
