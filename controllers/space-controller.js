@@ -1,13 +1,13 @@
 const Space = require('../models/spacedek.js');
-const routineController = {};
+const spaceController = {};
 
 
 
 
 
 
-routineController.update = (req, res) => {
-    Space.create({
+spaceController.create = (req, res) => {
+    Space.update({
         question: req.body.question,
         answer: req.body.answer,
     })

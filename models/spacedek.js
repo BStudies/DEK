@@ -8,16 +8,16 @@ const Space = {};
 
 Space.findByUserName = question =>{
     return db.one(`
-        SELECT * FROM routinedek
+        SELECT * FROM spacedek
         WHERE question = $1
     `,[question]);
 }
 
 
 
-Space.update = space =>{
+Space.create = (space) =>{
     return db.one(`
-        INSERT INTO spacedek
+        UPDATE spacedek SET
         (question, answer)
         VALUES
         ($1,$2)
@@ -25,6 +25,12 @@ Space.update = space =>{
     `, [space.question, space.answer]);
 };
 
+Pizza.destroy = (id) => {
+  return db.none(`
+    DELETE FROM movies
+    WHERE id = $1
+  `, [id]);
+}
 
 
 module.exports = Space;

@@ -13,7 +13,7 @@ Dek.findByUserName = question =>{
 
 
 
-User.create = dek =>{
+Dek.create = dek =>{
     return db.one(`
         INSERT INTO routinedek
         (question, answer)

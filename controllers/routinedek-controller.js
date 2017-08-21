@@ -3,9 +3,6 @@ const routineController = {};
 
 
 
-
-
-
 routineController.create = (req, res) => {
     Dek.create({
         question: req.body.question,
