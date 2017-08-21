@@ -8,6 +8,9 @@ import Footer from './components/Footer';
 import Welcome from './components/Welcome';
 import Register from './components/Register';
 import Login from './components/Login';
+
+import Main from './components/Main';
+
 import axios from 'axios';
 
 class App extends Component {
@@ -64,6 +67,7 @@ class App extends Component {
             <Route exact path="/" render={() => <Welcome />} />
             <Route exact path="/register" render={() => <Register handleRegisterSubmit={this.handleRegisterSubmit} />} />
             <Route exact path="/login" render={() => <Login handleLoginSubmit={this.handleLoginSubmit} />} />
+            <Route exact path="/main" component={Main} />
           </div>
           <Footer />
         </div>
