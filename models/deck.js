@@ -4,15 +4,8 @@ const Deck = {};
 
 
 
-Deck.findByUserName = user_id =>{
-    return db.one(`
-        SELECT * FROM deck
-        WHERE user_id = $1
-    `,[user_id]);
-}
-
-Deck.index = (deck) => {
-    return db.
+Deck.findAll = () =>{
+    return db.query('SELECT * FROM deck');
 }
 
 Deck.create = (deck) =>{
