@@ -1,6 +1,20 @@
 const Card = require('../models/deck.js');
 const deckController = {};
 
+
+deckController.index = (req, res) => {
+    Card.findAll()
+    .then(card => {
+        console.log('In index');
+        // res.render('',{
+        // })
+    })
+    .catch(err => {
+        console.log(err);
+        res.status(500).json({error: err});
+    })
+}
+
 deckController.create = (req, res) => {
     Card.create({
         user_id: req.body.user_id,
@@ -40,11 +54,18 @@ deckController.update = (res, res) => {
 }
 
 
-deckController.destroy = (req, res) => {
-    Card.delete({
 
-    })
+deckController.delete = (req, res) => {
+    Card.destroy(req.params.id)
     .then(card => {
         console.log('We deleted ${card}')
     })
+    .catch(err => {
+        console.log(err);
+        res.status(500).json({error: err});
+    })
 }
+
+
+
+
