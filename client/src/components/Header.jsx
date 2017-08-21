@@ -6,8 +6,8 @@ class Header extends Component {
       <div className='header'>
         <h1>DEK</h1>
         <div className='nav'>
-          <button>My Account</button>
-          <button>Logout</button>
+          <button className='nav-button'>My Account</button>
+          <button className='nav-button'>Logout</button>
         </div>
       </div>
     )
