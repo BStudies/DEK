@@ -56,7 +56,7 @@ deckController.update = (res, res) => {
 
 
 deckController.delete = (req, res) => {
-    Card.destroy(req.params.id)
+    Card.delete(req.params.id)
     .then(card => {
         console.log('We deleted ${card}')
     })
