@@ -11,6 +11,7 @@ import Login from './components/Login';
 
 import Main from './components/Main';
 import NameDeck from './components/NameDeck';
+import CreateCard from './components/CreateCard';
 
 import axios from 'axios';
 
@@ -67,6 +68,7 @@ class App extends Component {
             <Route exact path="/login" component={Login} />
             <Route exact path="/main" component={Main} />
             <Route exact path="/namedeck" component={NameDeck} />
+            <Route exact path="/createcard" component={CreateCard} />
           </div>
           <Footer />
         </div>
