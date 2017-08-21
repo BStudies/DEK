@@ -27,6 +27,10 @@ deckController.create = (req, res) => {
     })
     .then(card => {
         console.log(`Created ${card} in decks-controller`);
+        res.json({
+            message: 'Card created!',
+            data: card,
+        })
         // HERE, is there anything else necessary to to render
         // or redirect without conflicting with react routing after
         // creating the card?
