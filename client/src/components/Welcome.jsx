@@ -9,8 +9,8 @@ const Welcome = () => {
       <h1>Welcome!</h1>
       <h2>Short intro: what DEK is about...</h2>
       <div className='auth-buttons'>
-        <Link to="/login"><button>Login</button></Link>
-        <Link to="/register"><button>Register</button></Link>
+        <Link to="/login"><button>Sign Up</button></Link>
+        <Link to="/register"><button>Log In</button></Link>
       </div>
     </div>
     )

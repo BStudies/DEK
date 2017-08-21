@@ -63,7 +63,6 @@ class App extends Component {
     return (
       <Router>
         <div className="App">
-          <Header />
           <div className="main">
 
             <Route exact path="/" render={() => <Welcome />} />
