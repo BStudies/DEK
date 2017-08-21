@@ -4,7 +4,7 @@ const Dek = {};
 
 
 
-Dek.findByUserName = username =>{
+Dek.findByUserName = question =>{
     return db.one(`
         SELECT * FROM routinedek
         WHERE question = $1

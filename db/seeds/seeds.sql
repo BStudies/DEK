@@ -1,5 +1,3 @@
-\i
-
 INSERT INTO users (username, email, password_digest, firstname, lastname) VALUES
   (
     'alvarian',
