@@ -1,0 +1,28 @@
+const db = require('../db/config');
+
+const Dek = {};
+
+
+
+Dek.findByUserName = username =>{
+    return db.one(`
+        SELECT * FROM routinedek
+        WHERE question = $1
+    `,[question]);
+}
+
+
+
+User.create = dek =>{
+    return db.one(`
+        INSERT INTO routinedek
+        (question, answer)
+        VALUES
+        ($1,$2)
+        RETURNING *
+    `, [dek.question, dek.answer]);
+};
+
+
+
+module.exports = Dek;
