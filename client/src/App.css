@@ -84,18 +84,36 @@ button:focus {
 .nav {
   background: blue;
   border-radius: 83px;
-  width: 75px;
-  height: 75px;
+  width: 55px;
+  height: 55px;
   margin-right: 20px;
-  margin-top: 3px;
+  margin-top: 15px;
 }
 .nav-dropdown{
   background: aliceblue;
   height: 100px;
   position: relative;
-  top: 88px;
+  top: 68px;
   width: 120px;
-  right: 30px;
+  right: 54px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+.nav-dropdown:before{
+  border-width: 11px;
+    border-bottom-color: hsla(0,0%,80%,.6);
+    margin-left: -11px;
+    content: " ";
+    position: absolute;
+    display: block;
+    left: 50%;
+    bottom: 100%;
+    pointer-events: none;
+    border: solid transparent;
+}
+.nav-link{
+  padding-top: 15px;
 }
 
 
