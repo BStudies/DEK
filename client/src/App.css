@@ -562,16 +562,21 @@ textarea {
 /*User Profile Component */
 
 .user-profile {
+  justify-content: center;
+  text-align: center;
+  font-size: 20px;
+}
+
+.user-profile h2 {
+  font-size: 30px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.user-profile-info {
 
 }
 
-.username {
-
-}
-
-.scores {
-
-}
 
 /*Quiz Screen Component */
 

@@ -12,8 +12,11 @@ const UserProfile = (props) => {
 
       <h2>User Profile</h2>
 
-      <div className="welcome-user-name">
+      <div className="user-profile-info">
         <h3>Username: {props.username}</h3>
+        <h3>First Name: {props.firstname}</h3>
+        <h3>Last Name: {props.lastname}</h3>
+        <h3>E-mail address: {props.email}</h3>
       </div>
 
       <Footer />
