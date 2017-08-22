@@ -78,7 +78,6 @@ class App extends Component {
       }).catch(err => console.log(err));
   }
 
-
   // for rendering the path
   redirectTo = () => {
     if(this.state.redirect){
@@ -91,17 +90,19 @@ class App extends Component {
       <Router>
         <div className="App">
           <div className="main">
+
             <Route exact path="/" render={() => <Welcome />} />
-            <Route exact path="/main" render={() => <Main handleRedirect={this.handleRedirect} />} />
+            <Route exact path="/main" render={() => <Main handleRedirect={this.handleRedirect} username={this.state.user.username}/>} />
             <Route exact path="/register" render={() => <Register handleRegisterSubmit={this.handleRegisterSubmit} />} />
             <Route exact path="/login" render={() => <Login handleLoginSubmit={this.handleLoginSubmit} />} />
-            <Route exact path="/userprofile" component={UserProfile} />
+            <Route exact path="/userprofile" render={() => <UserProfile handleRedirect={this.handleRedirect} username={this.state.user.username}/>} />
             <Route exact path="/namedeck" component={NameDeck} />
             <Route exact path="/createcard"  component={CreateCard} />
             <Route exact path="/pickquiztype" component={PickQuizType} />
             <Route exact path="/quizscreen" component={QuizScreen} />
             <Route exact path="/editcards" component={EditCards} />
             {this.redirectTo()}
+
           </div>
         </div>
       </Router>
