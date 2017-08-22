@@ -10,7 +10,8 @@ const Main = (props) => {
 
   return (
     <div className='main-menu'>
-      {/*<Header handleRedirect={props.handleRedirect}/>*/}
+
+      <Header />
 
       <div className='menu-buttons'>
         <button onClick={(e)=>props.handleRedirect('/createcard')} className='menu-button'>Create Card</button>
