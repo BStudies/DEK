@@ -18,7 +18,7 @@ class QuizScreen extends Component{
   }
 
   handleCardPage(){
-  axios.get('/deck')
+  axios.get('/decks')
     .then(res => {
       this.setState({
         thestuff: res.data,
