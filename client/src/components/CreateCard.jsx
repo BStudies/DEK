@@ -48,7 +48,7 @@ class CreateCard extends Component{
         <h2>Create a Card!</h2>
           <div className="create-front">
             <div className="create-front-side-card">
-              <p>Write your question</p>
+              <p>Write the question</p>
               <form method="POST" onSubmit={this.handleFormSubmit}>
                  <input
                   type="text"
@@ -62,7 +62,7 @@ class CreateCard extends Component{
 
                   className="save-front-side-card"
                   type="submit"
-                  value="SUBMIT QUESTION"
+                  value="save"
                 />
               </form>
 
@@ -71,6 +71,7 @@ class CreateCard extends Component{
 
            <div className="create-back">
             <div className="create-back-side-card">
+              <p>Write the answer</p>
               <form method="POST" onSubmit={this.handleFormSubmit}>
 
                 <textarea
