@@ -40,12 +40,14 @@ class CreateCard extends Component{
           <div className="create-front">
             <h3>Front Side</h3>
             <div className="create-front-side-card">
+
             </div>
             <button className="save-front-side-card">Save</button>
           </div>
           <div className="create-back">
             <h3>Back Side</h3>
             <div className="create-back-side-card">
+
             </div>
             <button className="save-back-side-card">Save</button>
           </div>
