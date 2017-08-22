@@ -11,6 +11,12 @@ Deck.findAll = (user_id) =>{
     `,[user_id]);
 }
 
+Deck.findById = id => {
+    return db.query(`
+        
+    `)
+}
+
 Deck.create = (deck) =>{
     return db.one(`
         INSERT INTO deck
