@@ -2,16 +2,25 @@ import React from 'react';
 import {Link} from 'react-router-dom';
 import Header from './Header';
 
-const Main = () => {
+import Header from './Header';
+import Footer from './Footer';
+
+import CreateCard from './CreateCard';
+
+const Main = (props) => {
 
   return (
     <div className='main-menu'>
       <Header />
+
       <div className='menu-buttons'>
-        <button className='menu-button'>Create Card</button>
-        <button className='menu-button'>Take Quiz</button>
-        <button className='menu-button'>Edit Cards</button>
+        <button onClick={(e)=>props.handleRedirect('/createcard')} className='menu-button'>Create Card</button>
+        <button onClick={(e)=>props.handleRedirect('/quizscreen')} className='menu-button'>Take Quiz</button>
+        <button onClick={(e)=>props.handleRedirect('/editcards')} className='menu-button'>Edit Cards</button>
       </div>
+
+      <Footer />
+
     </div>
     )
 }
