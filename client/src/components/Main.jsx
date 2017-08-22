@@ -1,11 +1,12 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
+import Header from './Header';
 
 const Main = () => {
 
   return (
     <div className='main-menu'>
-      <h2>Main Menu</h2>
+      <Header />
       <div className='menu-buttons'>
         <button className='menu-button'>Create Card</button>
         <button className='menu-button'>Take Quiz</button>
