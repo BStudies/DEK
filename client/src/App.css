@@ -64,6 +64,7 @@ button:focus {
   outline: none;
 }
  input, button, submit { border:none; }  
+a {text-decoration: none}
 
 /*  ---------------- HEADER  ---------------- */
 .header {
@@ -88,6 +89,7 @@ button:focus {
   height: 55px;
   margin-right: 20px;
   margin-top: 15px;
+  cursor: pointer;
 }
 .nav-dropdown{
   background: aliceblue;
@@ -99,9 +101,12 @@ button:focus {
   display: flex;
   flex-direction: column;
   text-align: center;
+  opacity: 0;
 }
 .nav-link{
   padding-top: 15px;
+  font-family: 'Poppins', sans-serif;
+
 }
 
 /*  ---------------- FOOTER  ---------------- */
