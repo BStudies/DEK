@@ -1,17 +1,13 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
 
-const QuizScreen = () => {
+const EditCards = () => {
 
   return (
-    <div className='quiz-screen'>
-      <div className="front-card-all">
+    <div className='edit-screen'>
+      <div className="edit-front-card">
         <div className="show-front">
-          <p>Front of card goes here </p>
-        </div>
-
-        <div className="flip-card">
-          <button className="flip-card-button">Flip</button>
+          <p>Front of card to be edited... </p>
         </div>
 
         <div className="edit-delete">
@@ -20,10 +16,10 @@ const QuizScreen = () => {
         </div>
       </div>
 
-      <div className="back-card-all">
+      <div className="edit-back-card">
 
         <div className="show-back">
-           <p>Back of card goes here </p>
+           <p>Back of card to be edited...</p>
         </div>
 
         <div className="next-card-arrow">
@@ -35,10 +31,9 @@ const QuizScreen = () => {
           <button className="delete-card">Delete</button>
         </div>
 
-          {this.renderCardPage()}
       </div>
     </div>
   )
 }
 
-export default QuizScreen;
+export default EditCards;
