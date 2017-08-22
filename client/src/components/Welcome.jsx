@@ -5,11 +5,10 @@ const Welcome = () => {
 
 
   return (
-    
       <div className="white-border">
         <div className="card-tag"></div>
         <div className="card-tag-two"></div>
-        <div className="dash-border"></div>
+        <div className="border"></div>
         <div className='welcome'>
           <h1>Dek</h1>
           <h2>Short intro: what DEK is about...</h2>

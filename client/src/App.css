@@ -91,6 +91,15 @@ button:focus {
   top: 135px;
   right: -129px;
 }
+.border{
+  color: #fec1fc;
+  border: 10px solid #fec1fc;
+  border-image: repeating-linear-gradient( 45deg, #394cfe, #394cfe 1%, #fec1fc 1%, #fec1fc 8%) 10;
+  height: 93vh;
+  width: 96%;
+  margin: 1%;
+  position: absolute;
+}
 .welcome {
   text-align: center;
   background: white;
