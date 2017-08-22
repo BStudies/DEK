@@ -562,9 +562,7 @@ textarea {
 /*User Profile Component */
 
 .user-profile {
-  justify-content: center;
-  text-align: center;
-  font-size: 20px;
+
 }
 
 .user-profile h2 {
@@ -574,7 +572,9 @@ textarea {
 }
 
 .user-profile-info {
-
+  justify-content: center;
+  text-align: center;
+  font-size: 20px;
 }
 
 
