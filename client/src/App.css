@@ -307,6 +307,15 @@ input::placeholder {
 }
 
 /*  ---------------- MAIN PAGE  ---------------- */
+
+.welcome-user-name {
+  display: flex;
+  margin: 0 auto;
+  font-size: 25px;
+  justify-content: center;
+  align-items: center;
+}
+
 .menu-buttons{
   width: 600px;
   height: 40vh;
@@ -334,7 +343,9 @@ input::placeholder {
    color: black;
 }
 
+
 /*  ---------------- CREATE CARD PAGE (front) ---------------- */
+
 .create-card h2 {
   text-align: center;
   top: 25px;
