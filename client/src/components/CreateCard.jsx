@@ -13,10 +13,10 @@ const CreateCard = () => {
 
             <form method="POST" onSubmit="">
               <input type="text" placeholder="Question" />
+              <input className="save-front-side-card" type="submit" value="SUBMIT QUESTION" />
             </form>
 
           </div>
-          <button className="save-front-side-card">Save</button>
         </div>
         <div className="create-back">
           <h3>Back Side</h3>
@@ -24,10 +24,10 @@ const CreateCard = () => {
 
             <form method="POST" onSubmit="">
               <input type="text" placeholder="Answer" />
+              <input className="save-back-side-card" type="submit" value="SUBMIT ANSWER" />
             </form>
 
           </div>
-          <button className="save-back-side-card">Save</button>
         </div>
     </div>
   )
