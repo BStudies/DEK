@@ -8,37 +8,19 @@ CREATE TABLE users(
     firstname VARCHAR,
     lastname VARCHAR
 );
-
-<<<<<<< HEAD
--- DROP TABLE IF EXISTS routinedek;
--- CREATE TABLE routinedek(
---     id BIGSERIAL PRIMARY KEY,
---     question VARCHAR (255),
---     answer VARCHAR (255),
---     user_id REFERENCES users(id)
--- )
-
--- DROP TABLE IF EXISTS spacedek;
--- CREATE TABLE spacedek(
---     id BIGSERIAL PRIMARY KEY,
---     question VARCHAR (255),
---     answer VARCHAR (255),
---     routinedek REFERENCES routinedek(id)
--- )
-
-=======
+-- psql -d project_3_db 
+-- SELECT * FROM deck;
 DROP TABLE IF EXISTS deck;
 CREATE TABLE deck(
     id BIGSERIAL PRIMARY KEY,
-    question VARCHAR (255),
-    answer VARCHAR (255),
-    correct VARCHAR (255),
-    setTime VARCHAR UNIQUE NOT NULL,
-    timesRight VARCHAR UNIQUE NOT NULL,
-    timesWrong VARCHAR UNIQUE NOT NULL,
-    user_id INT REFERENCES users(id),
+    question TEXT,
+    answer TEXT,
+    correct BOOLEAN NOT NULL,
+    setTime VARCHAR NOT NULL,
+    timesRight INT NOT NULL,
+    timesWrong INT NOT NULL,
+    user_id INT REFERENCES users(id) NOT NULL,
     deckNumber INT NOT NULL
 )
 
->>>>>>> b9ea8a9da1731b84d0b1a0a3205480d12996c44e
 
