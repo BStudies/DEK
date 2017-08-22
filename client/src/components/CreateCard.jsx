@@ -15,7 +15,6 @@ class CreateCard extends Component{
 
         <h2>Create a Card!</h2>
           <div className="create-front">
-            <h3>Front Side</h3>
             <div className="create-front-side-card">
 
               <form method="POST" onSubmit="">
@@ -25,8 +24,7 @@ class CreateCard extends Component{
 
             </div>
           </div>
-          <div className="create-back">
-            <h3>Back Side</h3>
+          {/* <div className="create-back">
             <div className="create-back-side-card">
 
               <form method="POST" onSubmit="">
@@ -35,7 +33,7 @@ class CreateCard extends Component{
               </form>
 
             </div>
-          </div>
+          </div> */}
 
         <Footer />
       </div>
