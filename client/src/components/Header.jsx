@@ -5,7 +5,7 @@ class Header extends Component {
   render(){
     return (
       <div className='header'>
-        <h1>DEK</h1>
+        <h1 onClick={this.props.handleRedirect('/main')}>DEK</h1>
         <div className='nav'>
           <div className="nav-dropdown">
             <Link className='nav-link' to="/my-account">My Account</Link>
