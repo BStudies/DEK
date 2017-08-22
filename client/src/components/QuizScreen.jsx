@@ -1,10 +1,15 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
 
+import Header from './Header';
+import Footer from './Footer';
+
 const QuizScreen = () => {
 
   return (
     <div className='quiz-screen'>
+      <Header />
+
       <div className="front-card-all">
         <div className="show-front">
           <p>Front of card goes here </p>
@@ -37,6 +42,8 @@ const QuizScreen = () => {
 
           {this.renderCardPage()}
       </div>
+
+      <Footer />
     </div>
   )
 }
