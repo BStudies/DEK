@@ -66,6 +66,10 @@ button:focus {
 
  input, button, submit { border:none; }
 a {text-decoration: none}
+a:visited { text-decoration: none;}
+a:hover { text-decoration: none; }
+a:focus { text-decoration: none; }
+a:hover, a:active { text-decoration: none;}
 
 /*  ---------------- HEADER  ---------------- */
 .header {
@@ -345,7 +349,7 @@ input::placeholder {
 .create-front{
   width: 310px;
   height: 450px;
-  background: blue;
+  background: #fcd9ed;
   margin: 0 auto;
   border-radius: 33px;
   position: relative;
