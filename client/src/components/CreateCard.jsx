@@ -69,7 +69,7 @@ class CreateCard extends Component{
             </div>
           </div>
 
-           <div className="create-back">
+          <div className="create-back">
             <div className="create-back-side-card">
               <p>Write the answer</p>
               <form method="POST" onSubmit={this.handleFormSubmit}>
