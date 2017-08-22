@@ -5,8 +5,8 @@ const decksController = require('../controllers/decks-controller.js')
 
 deckRoutes.get('/', decksController.index)
 deckRoutes.post('/', decksController.create)
-deckRoutes.get('/:id', decksController.)
-deckRoutes.put('/:id', decksController.)
+deckRoutes.get('/:id', decksController.findById)
+deckRoutes.put('/:id', decksController.update)
 
 
 
