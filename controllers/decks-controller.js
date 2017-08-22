@@ -36,6 +36,12 @@ deckController.create = (req, res) => {
     })
 }
 
+
+
+deckController.findById = (req, res) => {
+
+}
+
 deckController.update = (req, res) => {
     Deck.update({
         user_id: req.body.user_id,

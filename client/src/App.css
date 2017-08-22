@@ -132,6 +132,16 @@ a:focus { text-decoration: none; color: inherit; }
 }
 
 /*  ---------------- WELCOME PAGE  ---------------- */
+.welcome-message {
+  width: 49%;
+  margin: 0 auto;
+  position: relative;
+}
+.welcome-user-name p{
+  font-family: 'Poppins', sans-serif;
+  font-size: 35px;
+  margin-top: 50px;
+}
 .card-tag {
   width: 300px;
   height: 480px;
@@ -141,7 +151,7 @@ a:focus { text-decoration: none; color: inherit; }
   z-index: 9;
   transform: rotate(35deg);
   box-shadow: 2.2rem 0.4rem 4.8rem rgba(0,0,0,0.4);
-  top: -205px;
+  top: -270px;
   left: 160px;
 }
 .card-tag-two{
@@ -172,7 +182,7 @@ a:focus { text-decoration: none; color: inherit; }
 .welcome h1 {
   font-size: 100px;
   position: relative;
-  top: 40px;
+  top: 65px;
   font-family: 'axisbold';
   letter-spacing: 5px;
   text-transform: uppercase;
@@ -187,7 +197,7 @@ a:focus { text-decoration: none; color: inherit; }
 }
 .auth-buttons {
   position: relative;
-  top: 300px;
+  top: 220px;
   width: 40%;
   margin: 0 auto;
   display: flex;
@@ -324,7 +334,7 @@ input::placeholder {
   flex-wrap: wrap;
   justify-content: space-around;
   position: relative;
-  top: 170px;
+  top: 130px;
 }
 .menu-button{
   background: #fec1fc;
@@ -345,7 +355,11 @@ input::placeholder {
 
 
 /*  ---------------- CREATE CARD PAGE (front) ---------------- */
-
+.cards-container {
+  display: flex;
+  width: 60%;
+  margin: 0 auto;
+}
 .create-card h2 {
   text-align: center;
   top: 25px;
@@ -463,107 +477,7 @@ textarea {
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*Link to main menu in header */
-
-.header-link-to-main {
-
-}
-
-
-.main-menu {
-
-}
-
-.menu-buttons {
-
-}
-
-.menu-button {
-
-}
-
-/*Nav class in Header component*/
-
-.nav {
-
-}
-
-/*Name Deck component*/
-
-.name-deck {
-
-}
-
-.namedeck-button {
-
-}
-
-
-/*Create Card component*/
-.create-card {
-
-}
-
-.create-front {
-
-}
-
-.create-front-side-card {
-
-}
-
-.save-front-side-card {
-
-}
-
-.create-back {
-
-}
-
-.create-back-side-card {
-
-}
-
-.save-back-side-card {
-
-}
-
-/*Pick Quiz Type Component*/
-
-.pick-quiz-type {
-
-}
-
-.pickquiz-form {
-
-}
-
-.pickquiz-button {
-
-}
-
 /*User Profile Component */
-
-.user-profile {
-
-}
 
 .user-profile h2 {
   font-size: 30px;
@@ -577,50 +491,4 @@ textarea {
   font-size: 20px;
 }
 
-
-/*Quiz Screen Component */
-
-.quiz-screen {
-
-}
-
-.front-card-all {
-
-}
-
-.show-front {
-
-}
-
-.flip-card {
-
-}
-
-.flip-card-button {
-
-}
-
-.edit-delete {
-
-}
-
-.edit-card-button {
-
-}
-
-.delete-card-button {
-
-}
-
-.back-card-all {
-
-}
-
-.show-back {
-
-}
-
-.next-card-arrow {
-
-}
 
