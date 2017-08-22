@@ -13,8 +13,9 @@ Deck.findAll = (user_id) =>{
 
 Deck.findById = id => {
     return db.query(`
-        
-    `)
+        SELECT * FROM deck
+        WHERE id = $1
+    `, [id])
 }
 
 Deck.create = (deck) =>{
