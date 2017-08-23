@@ -55,13 +55,13 @@ class CreateCard extends Component{
               <div className="create-front-side-card">
                 <p>Write your question</p>
                 <form method="POST" onSubmit={this.handleFormSubmit}>
-                  <input
+                  <textarea
                     type="text"
                     placeholder=" "
                     name="question"
                     value={this.state.question}
                     onChange={this.handleInputChange}
-                  />
+                  ></textarea>
 
                 </form>
 
