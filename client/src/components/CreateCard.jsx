@@ -27,10 +27,11 @@ class CreateCard extends Component{
 
   handleFormSubmit(e) {
     e.preventDefault();
+    // console.log(this.state);
     axios.post('/decks', {
         question: this.state.question,
         answer: this.state.answer,
-        user_id: this.state.user.id,
+        user_id: this.props.state.user.id,
         // allow modified deck number later
         deckNumber: 1,
     })
@@ -38,7 +39,6 @@ class CreateCard extends Component{
       console.log(res);
     })
     .catch(err => console.log(err));
-    e.target.reset();
   }
 
   render(){
