@@ -3,7 +3,7 @@ const deckController = {};
 
 
 deckController.index = (req, res) => {
-    Deck.findAll()
+    Deck.findAll(req.body.user_id)
     .then(cards => {
         // console.log(`${card} is in index`);
         res.json(cards);

@@ -3,9 +3,16 @@ import {Link} from 'react-router-dom';
 
 import Header from './Header';
 import Footer from './Footer';
+import axios from 'axios';
 
 const EditCards = () => {
 
+  // fetch to backend /decks
+  axios.get('/decks', {
+    user_id: this.props.state.user.id
+  })
+  // with user_id in the body
+  // display all cards
   return (
     <div className='edit-screen'>
       <Header />
