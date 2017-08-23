@@ -12,8 +12,8 @@ const PickQuizType = () => {
 
       <h2>Pick Your Quiz Type!</h2>
       <div className='pickquiz-form'>
-          <button className="pickquiz-button">Basic Quiz (review all cards)</button>
-          <button className="pickquiz-button">Curated Quiz (spaced repetition)</button>
+          <button className="pickquiz-button">Basic Quiz<p>(review all cards)</p></button>
+          <button className="pickquiz-button">Curated Quiz<p>(spaced repetition)</p></button>
       </div>
 
       <Footer />
@@ -22,3 +22,5 @@ const PickQuizType = () => {
 }
 
 export default PickQuizType;
+
+
