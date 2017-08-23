@@ -51,7 +51,6 @@ class App extends Component {
       options
     })
     .then(res => {
-
       this.setState(options)
       this.handleRedirect('/main')
     })
@@ -60,13 +59,11 @@ class App extends Component {
 
   handleRedirect = (path) => {
     this.setState({
-      redirect: !this.state.redirect,
+      redirect: true,
       redirecting: path,
     })
     console.log(`The path is: ` + path)
-    this.setState({
-      redirect: !this.state.redirect,
-    })
+    
   }
 
   logOut() {
@@ -82,6 +79,10 @@ class App extends Component {
   // for rendering the path
   redirectTo = () => {
     if(this.state.redirect){
+      console.log('redirect')
+      this.setState({
+        redirect: false,
+      })
       return(<Redirect to={this.state.redirecting}/>)
     }
   }
