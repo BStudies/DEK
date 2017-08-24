@@ -65,7 +65,7 @@ class EditCards extends Component{
     if(this.state.gotCards){
       return (
 
-        <div className='edit-screen'>
+        <div className='edit-screen no-message'>
           <Header />
 
           <div className="edit-container">
