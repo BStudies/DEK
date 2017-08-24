@@ -35,7 +35,10 @@ class BackOfCard extends Component{
         e.preventDefault();
         console.log('this is where we should put to /decks')
     }
-
+    handleNextCard = e => {
+        this.props.rotateCard();
+        this.props.getNextCard();
+    }
 
     render(){
         if(this.state.didMount){
@@ -49,7 +52,7 @@ class BackOfCard extends Component{
                             {/*http://fontawesome.io/icon/check-circle-o/*/}
                         </div>
                     </div>
-                    <button onClick={()=>this.props.rotateCard()}>Flip</button>
+                    <button onClick={this.handleNextCard}>Next</button>
                     
                 </div>
                 

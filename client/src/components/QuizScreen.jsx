@@ -53,6 +53,15 @@ class QuizScreen extends Component{
     })
   }
   
+  getNextCard = () => {
+    if(this.state.currentCard < this.state.cards.length)
+    this.setState({
+      currentCard: this.state.currentCard+1,
+    })
+    else{
+      console.log("Got last card");
+    }
+  }
 
 
   decideWhichSideOfCard = () => {
@@ -62,7 +71,7 @@ class QuizScreen extends Component{
       )
     }
     return(
-      <BackOfCard rotateCard={this.rotateCard} card={this.state.cards[this.state.currentCard].props.card}/>
+      <BackOfCard getNextCard={this.getNextCard} rotateCard={this.rotateCard} card={this.state.cards[this.state.currentCard].props.card}/>
     )
   }
 
