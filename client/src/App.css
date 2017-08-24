@@ -681,15 +681,6 @@ textarea {
   padding-bottom: 8rem;
   background: #43C0F6;
 }
-
-.edit-container {
-  height: 90vh;
-}
-
-.edit-cards-main {
-  background-color: #43C0F6;
-}
-
 .edit-screen h2 {
   text-align: center;
   top: 115px;
