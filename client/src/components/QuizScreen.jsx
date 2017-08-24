@@ -79,8 +79,10 @@ class QuizScreen extends Component{
     }
     // console.log('finished exam')
     return(
-      <h1>Finished Quiz</h1>
-      <h1>Score: {this.state.numberCorrect*100/(this.state.numberCorrect+this.state.numberWrong)}%</h1>
+      <div className='scoreScreen'>
+        <h1>Finished Quiz</h1>
+        <h1>Score: {this.state.numberCorrect*100/(this.state.numberCorrect+this.state.numberWrong)}%</h1>
+      </div>
     )
   }
 
