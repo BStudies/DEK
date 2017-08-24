@@ -5,7 +5,8 @@ import Header from './Header';
 import Footer from './Footer';
 import axios from 'axios';
 import Card from './Card.jsx';
-
+import FrontOfCard from './FrontOfCard.jsx'
+import BackOfCard from './BackOfCard.jsx'
 
 
 
@@ -15,13 +16,14 @@ class QuizScreen extends Component{
     this.state = {
       gotCards: false,
       currentCard: 0,
+      frontOfCard: true,
     }
   }
 
   getCards = () => {
     let cards = [];
     // fetch to backend /decks
-    console.log(this.props.state.user.id)
+    // console.log(this.props.state.user.id)
     axios.get('/decks', {
       user_id: this.props.state.user.id
     })
@@ -43,7 +45,26 @@ class QuizScreen extends Component{
   componentDidMount(){
     this.getCards();
   }
+
+
+  rotateCard=()=>{
+    this.setState({
+      frontOfCard: !this.state.frontOfCard,
+    })
+  }
   
+
+
+  decideWhichSideOfCard = () => {
+    if(this.state.frontOfCard){
+      return(
+        <FrontOfCard rotateCard={this.rotateCard} card={this.state.cards[this.state.currentCard].props.card}/>
+      )
+    }
+    return(
+      <BackOfCard rotateCard={this.rotateCard} card={this.state.cards[this.state.currentCard].props.card}/>
+    )
+  }
 
   // display all cards
   render(){
@@ -51,9 +72,7 @@ class QuizScreen extends Component{
       return (
         <div className='edit-screen'>
           <Header />
-          {/*<FrontOfCard/>
-          <BackOfCard/>*/}
-          {this.state.cards[this.state.currentCard]}
+          {this.decideWhichSideOfCard()}
           <Footer />
         </div>
       )

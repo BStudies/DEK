@@ -43,7 +43,7 @@ class BackOfCard extends Component{
                     
                     <div className="create-back">
                         <div className="create-back-side-card">
-                            <p>Answer</p>
+                            <h1>{this.state.answer}</h1>
                             {/*http://fontawesome.io/icon/times-circle/*/}
                             {/*http://fontawesome.io/icon/check-circle-o/*/}
                         </div>

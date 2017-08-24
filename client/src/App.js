@@ -51,8 +51,16 @@ class App extends Component {
       options
     })
     .then(res => {
-      this.setState(options)
-      this.handleRedirect('/main')
+      console.log("Options:")
+      console.log(options)
+      console.log('Res Data:')
+      console.log(res.data)
+      this.setState({
+        auth: res.data.auth,
+        user: res.data.user,
+      })
+      // handleLoginSubmit = (e, res.username, password)
+      window.location.href = '/'
     })
     .catch(err => console.log(err));
   }
