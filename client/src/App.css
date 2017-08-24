@@ -112,10 +112,12 @@ a:focus { text-decoration: none; color: inherit; }
 }
 
 .bars {
-  font-weight: 900;
-  color: black;
-  font-size: 70px;
-  line-height: 15px;
+  width: 31px;
+  height: 31px;
+  position: relative;
+  left: 55px;
+  top: 15px;
+  font-size: 35px;
 }
 
 .nav-dropdown {
