@@ -384,6 +384,24 @@ input::placeholder {
    color: #F81B84;
 }
 
+.menu-button-edit{
+  background: #F5CE28;
+  flex: 250px 0;
+  border-radius: 15px;
+  height: 85px;
+  cursor: pointer;
+  font-size: 25px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  letter-spacing: 2px;
+  color: #F2EEE2;
+}
+
+.menu-button-edit:hover {
+   background: #F2EEE2;
+   color: #F5CE28;
+}
+
 
 /*  ---------------- CREATE CARD PAGE (front) ---------------- */
 .create-card {
