@@ -600,26 +600,32 @@ textarea {
   display: flex;
   position: relative;
   top: 165px;
+  justify-content: center;
+  align-items: center;
+  padding: 0 5vw 0 5vw;
 }
 
 .pickquiz-button-one{
   flex: 50% 0;
-  height: 68vh;
+  height: 50vh;
   cursor: pointer;
   font-family: 'Poppins', sans-serif;
   color: white;
   text-align: center;
   background: #f81b84;
+  justify-content: center;
+  margin: 0 5vw 0 5vw;
 }
 
 .pickquiz-button-two {
   flex: 50% 0;
-  height: 68vh;
+  height: 50vh;
   cursor: pointer;
   font-family: 'Poppins', sans-serif;
   color: white;
   text-align: center;
   background: #F5CE28;
+  margin: 0 5vw 0 5vw;
 }
 
 .pickquiz-button-one p{
