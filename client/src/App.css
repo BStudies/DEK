@@ -737,7 +737,40 @@ textarea {
   background: #43C0F6;
 }
 .no-message {
-  
+  height: 100vh;
+  padding-bottom: 0;
+}
+.no-cards-container {
+  width: 50%;
+  height: 500px;
+  background: #F5CE28;
+  margin: 0 auto;
+  position: relative;
+  top: 120px;
+  border-radius: 40px;
+  text-align: center;
+}
+.no-cards-container h1 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  position: relative;
+  top: 200px;
+  font-size: 40px;
+}
+.edit-cards-main_no_cards {
+  width: 100%;
+  height: 80vh;
+  position: relative;
+  top: 110px;
+  text-align: center;
+  font-size: 60px;
+}
+.edit-cards-main_no_cards h1 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  position: relative;
+  top: 200px;
+  font-size: 40px;
 }
 .edit-screen h2 {
   text-align: center;
