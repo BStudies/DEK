@@ -48,12 +48,12 @@ class BackOfCard extends Component{
                     <div className="create-back">
                         <div className="create-back-side-card">
                             <h1>{this.state.answer}</h1>
-                            {/*http://fontawesome.io/icon/times-circle/*/}
-                            {/*http://fontawesome.io/icon/check-circle-o/*/}
                         </div>
-                    </div>
-                    <button onClick={this.handleNextCard}>Next</button>
-                    
+                        <button onClick={this.handleNextCard}>Incorrect</button>
+                        {/* or http://fontawesome.io/icon/times-circle/*/}
+                        <button onClick={this.handleNextCard}>Correct</button>
+                        {/* or http://fontawesome.io/icon/check-circle-o/*/}
+                    </div>                    
                 </div>
                 
             )
