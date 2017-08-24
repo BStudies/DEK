@@ -17,11 +17,12 @@ class Card extends Component{
             question: this.props.card.question, 
             answer: this.props.card.answer, 
             correct: this.props.card.correct, 
-            setTime: this.props.card.setTime, 
-            timesRight: this.props.card.timesRight, 
-            timesWrong: this.props.card.timesWrong, 
-            deckNumber: this.props.card.deckNumber,
+            setTime: this.props.card.settime, 
+            timesRight: this.props.card.timesright, 
+            timesWrong: this.props.card.timeswrong, 
+            deckNumber: this.props.card.decknumber,
             didMount: true,
+            id: this.props.card.id,
         })
     }
 
@@ -38,7 +39,7 @@ class Card extends Component{
         e.preventDefault();
         console.log('this is where we should put to /decks')
         console.log(this.props.card)
-        axios.put(`/decks/${this.props.card.id}`,this.props.card)
+        axios.put(`/decks/${this.state.id}`,this.state)
         .then(res => {
             console.log("Update Complete")
         })
