@@ -14,6 +14,8 @@ class QuizScreen extends Component{
       gotCards: false,
       currentCard: 0,
       frontOfCard: true,
+      numberCorrect: 0,
+      numberWrong: 0,
     }
   }
 
@@ -53,6 +55,17 @@ class QuizScreen extends Component{
       })
   }
 
+  increaseNumberCorrect = () => {
+    this.setState({
+      numberCorrect: this.state.numberCorrect+1
+    })
+  }
+  increaseNumberWrong = () => {
+    this.setState({
+      numberWrong: this.state.numberWrong+1
+    })
+  }
+
   decideWhichSideOfCard = () => {
     if(this.state.currentCard < this.state.cards.length){
       if(this.state.frontOfCard){
@@ -61,7 +74,7 @@ class QuizScreen extends Component{
         )
       }
       return(
-        <BackOfCard getNextCard={this.getNextCard} rotateCard={this.rotateCard} card={this.state.cards[this.state.currentCard].props.card}/>
+        <BackOfCard increaseNumberCorrect={this.increaseNumberCorrect} increaseNumberWrong={this.increaseNumberWrong} getNextCard={this.getNextCard} rotateCard={this.rotateCard} card={this.state.cards[this.state.currentCard].props.card}/>
       )
     }
     // console.log('finished exam')
