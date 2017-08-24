@@ -9,12 +9,11 @@ import Card from './Card.jsx';
 
 
 
-class QuizScreen extends Component{
+class EditCards extends Component{
   constructor(){
     super();
     this.state = {
       gotCards: false,
-      currentCard: 0,
     }
   }
 
@@ -51,9 +50,7 @@ class QuizScreen extends Component{
       return (
         <div className='edit-screen'>
           <Header />
-          {/*<FrontOfCard/>
-          <BackOfCard/>*/}
-          {this.state.cards[this.state.currentCard]}
+          {this.state.cards}
           <Footer />
         </div>
       )
@@ -67,4 +64,4 @@ class QuizScreen extends Component{
   
 }
 
-export default QuizScreen;
+export default EditCards;

@@ -1,11 +1,13 @@
-const Card = require('../models/deck.js');
+const Deck = require('../models/deck.js');
 const deckController = {};
 
 
 deckController.index = (req, res) => {
-    Card.findAll()
-    .then(card => {
-        console.log(`${card} is in index`);
+    console.log(req);
+    Deck.findAll(req.user.id)
+    .then(cards => {
+        // console.log(`${card} is in index`);
+        res.json(cards);
     })
     .catch(err => {
         console.log(err);
@@ -15,15 +17,12 @@ deckController.index = (req, res) => {
 
 deckController.create = (req, res) => {
 
-    console.log("deck-controller, create from "+req.body);
-    Card.create({
+    // console.log(req.body)
+    Deck.create({
         user_id: req.body.user_id,
         question: req.body.question,
         answer: req.body.answer,
-        correct: req.body.correct,
-        setTime: req.body.time,
-        timesRight: req.body.timesRight,
-        timesWrong: req.body.timesWrong,
+        deckNumber: req.body.deckNumber,
     })
     .then(card => {
         console.log(`Created ${card} in decks-controller`);
@@ -31,9 +30,6 @@ deckController.create = (req, res) => {
             message: 'Card created!',
             data: card,
         })
-        // HERE, is there anything else necessary to to render
-        // or redirect without conflicting with react routing after
-        // creating the card?
     })
     .catch(err => {
         console.log(err);
@@ -41,11 +37,26 @@ deckController.create = (req, res) => {
     })
 }
 
-deckController.update = (res, res) => {
-    Card.update({
+
+
+deckController.findById = (req, res) => {
+    Deck.findById(req.params.id)
+    .then(card => {
+        console.log(card);
+        res.json(card);
+    })
+    .catch(err => {
+        res.status(500).json(err);
+    })
+}
+
+deckController.update = (req, res) => {
+    Deck.update({
         user_id: req.body.user_id,
+        // for edit these two change
         question: req.body.question,
         answer: req.body.answer,
+        // for quiz result update, these change
         correct: req.body.correct,
         setTime: req.body.time,
         timesRight: req.body.timesRight,
@@ -63,7 +74,7 @@ deckController.update = (res, res) => {
 
 
 deckController.delete = (req, res) => {
-    Card.delete(req.params.id)
+    Deck.delete(req.params.id)
     .then(card => {
         console.log('We deleted ${card}')
     })
@@ -74,5 +85,5 @@ deckController.delete = (req, res) => {
 }
 
 
-
+module.exports = deckController;
 

@@ -12,10 +12,10 @@ import Login from './components/Login';
 
 import Main from './components/Main';
 import UserProfile from './components/UserProfile';
-import NameDeck from './components/NameDeck';
 import CreateCard from './components/CreateCard';
 import PickQuizType from './components/PickQuizType';
 import QuizScreen from './components/QuizScreen';
+import EditCards from './components/EditCards';
 
 import axios from 'axios';
 
@@ -36,6 +36,7 @@ class App extends Component {
       password,
     }).then(res => {
       console.log(res.data.user)
+
       this.setState({
         auth: res.data.auth,
         user: res.data.user,
@@ -56,6 +57,7 @@ class App extends Component {
     .catch(err => console.log(err));
   }
 
+<<<<<<< HEAD
 
   handleRedirect = (path) => {
     this.setState({
@@ -66,6 +68,15 @@ class App extends Component {
       redirect: !this.state.redirect,
       redirecting: '',
     })
+=======
+  handleRedirect = (path) => {
+    this.setState({
+      redirect: true,
+      redirecting: path,
+    })
+    console.log(`The path is: ` + path)
+    
+>>>>>>> 72a9b5b273dbc297e30c147c69bc4142101547e9
   }
 
   logOut() {
@@ -78,10 +89,20 @@ class App extends Component {
       }).catch(err => console.log(err));
   }
 
+<<<<<<< HEAD
 
   // for rendering the path
   redirectTo = () => {
     if(this.state.redirect){
+=======
+  // for rendering the path
+  redirectTo = () => {
+    if(this.state.redirect){
+      console.log('redirect')
+      this.setState({
+        redirect: false,
+      })
+>>>>>>> 72a9b5b273dbc297e30c147c69bc4142101547e9
       return(<Redirect to={this.state.redirecting}/>)
     }
   }
@@ -92,15 +113,21 @@ class App extends Component {
         <div className="App">
           <div className="main">
             <Route exact path="/" render={() => <Welcome />} />
-            <Route exact path="/main" render={() => <Main />} />
+            <Route exact path="/main" render={() => <Main handleRedirect={this.handleRedirect} firstname={this.state.user.firstname}/>} />
             <Route exact path="/register" render={() => <Register handleRegisterSubmit={this.handleRegisterSubmit} />} />
             <Route exact path="/login" render={() => <Login handleLoginSubmit={this.handleLoginSubmit} />} />
-            <Route exact path="/userprofile" component={UserProfile} />
-            <Route exact path="/namedeck" component={NameDeck} />
-            <Route exact path="/createcard" component={CreateCard} />
+            <Route exact path="/userprofile" render={() => <UserProfile handleRedirect={this.handleRedirect} id={this.state.user.id} username={this.state.user.username} firstname={this.state.user.firstname} lastname={this.state.user.lastname} email={this.state.user.email}/>} />
+            <Route exact path="/createcard"  render={() => <CreateCard handleRedirect={this.handleRedirect} state={this.state} />} />
             <Route exact path="/pickquiztype" component={PickQuizType} />
+<<<<<<< HEAD
             <Route exact path="/quizscreen" component={QuizScreen} />
             {this.redirectTo()}
+=======
+            <Route exact path="/quizscreen" render={() => <QuizScreen handleRedirect={this.handleRedirect} state={this.state} />} />
+            <Route exact path="/editcards" render={() => <EditCards handleRedirect={this.handleRedirect} state={this.state} />} />
+            {this.redirectTo()}
+
+>>>>>>> 72a9b5b273dbc297e30c147c69bc4142101547e9
           </div>
         </div>
       </Router>

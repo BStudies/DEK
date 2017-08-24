@@ -1,17 +1,25 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
 
-const UserProfile = () => {
+import Header from './Header';
+import Footer from './Footer';
+
+const UserProfile = (props) => {
 
   return (
     <div className='user-profile'>
-      <h2>User Profile</h2>
-      <div className='username'>
-        <h3>Username</h3>
+      <Header />
+
+      <div className="user-profile-info">
+       <h2>Your Profile</h2>
+        <h3>User ID: {props.id}</h3>
+        <h3>Username: {props.username}</h3>
+        <h3>First Name: {props.firstname}</h3>
+        <h3>Last Name: {props.lastname}</h3>
+        <h3>E-mail: {props.email}</h3>
       </div>
-      <div className='scores'>
-        <h3>Scores</h3>
-      </div>
+
+      <Footer />
     </div>
     )
 }
