@@ -58,9 +58,10 @@ deckController.update = (req, res) => {
         answer: req.body.answer,
         // for quiz result update, these change
         correct: req.body.correct,
-        setTime: req.body.time,
-        timesRight: req.body.timesRight,
-        timesWrong: req.body.timesWrong,
+        setTime: req.body.settime,
+        timesRight: req.body.timesright,
+        timesWrong: req.body.timeswrong,
+        deckNumber: req.body.decknumber
     }, req.params.id)
     .then(card => {
         console.log(`Updated ${card} in decks-controller`)

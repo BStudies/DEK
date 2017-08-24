@@ -1,4 +1,8 @@
 import React, {Component} from 'react';
+import axios from 'axios'
+
+
+
 
 class Card extends Component{
     constructor(){
@@ -33,6 +37,14 @@ class Card extends Component{
     handleFormSubmit = (e) => {
         e.preventDefault();
         console.log('this is where we should put to /decks')
+        console.log(this.props.card)
+        axios.put(`/decks/${this.props.card.id}`,this.props.card)
+        .then(res => {
+            console.log("Update Complete")
+        })
+        .catch(err => {
+            console.log(err);
+        })
     }
 
 
