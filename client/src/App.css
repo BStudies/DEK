@@ -254,6 +254,7 @@ a:focus { text-decoration: none; color: inherit; }
   margin: 0 auto;
   position: relative;
   top: 111px;
+  border-radius: 30px;
 }
 .register-wrap h1 {
   font-size: 100px;
@@ -304,6 +305,7 @@ input::placeholder {
   margin: 0 auto;
   position: relative;
   top: 111px;
+  border-radius: 30px;
 }
 .login-wrap h1 {
   font-size: 100px;
