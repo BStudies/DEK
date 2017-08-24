@@ -344,7 +344,7 @@ input::placeholder {
 .main-menu {
   height: 100vh;
   position: relative;
-  background: #f5f8f9;
+  background-color: #43C0F6;
 }
 .welcome-user-name {
   display: flex;
@@ -352,6 +352,7 @@ input::placeholder {
   font-size: 25px;
   justify-content: center;
   align-items: center;
+  background-color: #43C0F6;
 }
 
 .menu-buttons{
@@ -363,9 +364,10 @@ input::placeholder {
   justify-content: space-around;
   position: relative;
   top: 90px;
+  background-color: #43C0F6;
 }
 .menu-button{
-  background: #fec1fc;
+  background: #F81B84;
   flex: 250px 0;
   border-radius: 15px;
   height: 85px;
@@ -374,11 +376,12 @@ input::placeholder {
   font-family: 'Poppins', sans-serif;
   font-weight: 600;
   letter-spacing: 2px;
-  color: white;
+  color: #F2EEE2;
 }
+
 .menu-button:hover {
-   background: #b7f8fe;
-   color: black;
+   background: #F2EEE2;
+   color: #F81B84;
 }
 
 
