@@ -99,9 +99,10 @@ a:focus { text-decoration: none; color: inherit; }
   letter-spacing: 5px;
   text-transform: uppercase;
   flex: 1;
-  padding-left: 30px;
+  padding-left: 50px;
   padding-top: 10px;
 }
+
 .header h1 a:hover {
   color: #F81B84;
 }
@@ -110,7 +111,6 @@ a:focus { text-decoration: none; color: inherit; }
   width: 31px;
   height: 31px;
   position: relative;
-  left: 55px;
   top: 15px;
   font-size: 35px;
 }
