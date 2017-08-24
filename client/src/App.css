@@ -46,6 +46,9 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+* {
+  -webkit-font-smoothing: antialiased;
+}
 
 /*  ---------------- FONTS  ---------------- */
 @font-face {
@@ -613,6 +616,26 @@ textarea {
   color: black;
   background: #f2eee2;
 }
+.quiz_question {
+  text-align: center;
+  font-size: 35px;
+  line-height: 35px;
+}
+.edit_delete_icons {
+  width: 20%;
+  margin: 0 auto;
+  position: relative;
+  top: 285px;
+  color: #f81b84;
+}
+.fa-pencil {
+  padding-right: 10px;
+  font-size: 25px;
+}
+.fa-trash {
+  padding-left: 10px;
+  font-size: 25px;
+}
 
 
 /*  ---------------- EDIT CARD PAGE (front) ---------------- */
@@ -644,5 +667,18 @@ textarea {
 
 /*  ---------------- QUIZ SCREEN PAGE ---------------- */
 .rotate_button {
-  background: red;
+  width: 105px;
+  margin: 0 auto;
+  height: 45px;
+  border-radius: 9px;
+  font-size: 18px;
+  letter-spacing: 1px;
+  margin-top: 20px;
+  font-family: 'Poppins', sans-serif;
+  cursor: pointer;
+  background: #f5ce28;
+  color: black;
+  position: relative;
+  top: -397px;
+  display: block;
 }
