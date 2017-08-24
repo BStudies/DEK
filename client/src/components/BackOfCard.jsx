@@ -40,6 +40,13 @@ class BackOfCard extends Component{
         this.props.getNextCard();
     }
 
+    handleIncorrect = e => {
+
+    }
+    handleCorrect = e => {
+        
+    }
+
     render(){
         if(this.state.didMount){
             return(
