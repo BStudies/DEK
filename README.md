@@ -39,6 +39,17 @@ The app uses auth for unique user registration/login.
 
 ### Sample Code
 [ADD CODE SNIPPETS]
+```javascript
+Deck.findByTime = (user_id, moment) => {
+    return db.query(`
+        SELECT * FROM deck
+        WHERE user_id=$1
+        AND 
+        (setTime < $2
+        OR correct=false)
+    `, [user_id, moment])
+}
+```
 
 ## Making of the App
 [ADD TEXT]
