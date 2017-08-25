@@ -416,30 +416,34 @@ input::placeholder {
   position: relative;
   background-color: #43C0F6;
 }
-
 .about-app-message {
-  color: black;
-  font-size: 20px;
   top: 20vh;
   display: flex;
   justify-content: center;
   flex-direction: column;
-  max-width: 600px;
+  max-width: 500px;
   position: relative;
-  height: 400px;
+  height: 350px;
   border: 10px solid #F5CE28;
   margin: 0 auto;
   text-align: center;
   background-color: #F2EEE2;
-  line-height: 1.3em;
 }
 
 .about-app-message h2 {
+  font-family: 'Poppins', sans-serif;
   font-size: 30px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 .about-app-message p {
-  font-size: 20px;
+  font-family: 'Poppins', sans-serif;
+  padding-bottom: 5px;
+  font-size: 18px;
 }
 
 /*  ---------------- CREATE CARD PAGE (front) ---------------- */
