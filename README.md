@@ -21,6 +21,8 @@ When the user is reviewing flash cards, the user will view the front side of a f
 
 Each card can also be deleted, or edited and updated.
 
+DEK is deployed at:  https://dek-flashcards.herokuapp.com/
+
 ## Technologies
 
 ### React
