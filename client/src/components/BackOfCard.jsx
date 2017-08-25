@@ -2,6 +2,7 @@ import axios from 'axios'
 import React, {Component} from 'react';
 import moment from 'moment';
 import FontAwesome from 'react-fontawesome';
+import {Link} from 'react-router-dom';
 
 
 class BackOfCard extends Component{
@@ -85,6 +86,7 @@ class BackOfCard extends Component{
                     <div className='right-wrong'>
                         <button onClick={this.handleIncorrect} className='incorrect-button'><i className="fa fa-times" aria-hidden="true"></i></button>
                         <button onClick={this.handleCorrect} className='correct-button'><i className="fa fa-check" aria-hidden="true"></i></button>
+                        <Link Link to="/editcards"><i className="fa fa-pencil" aria-hidden="true"></i></Link>
                     </div>
                 </div>
 
