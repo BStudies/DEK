@@ -56,7 +56,6 @@ table {
     src: url('axis-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
-
 }
 
 /*  ---------------- GENERAL  ---------------- */
@@ -883,11 +882,57 @@ textarea {
 }
 .right-wrong button:hover {
   background: #F81B84;
-  color: white; 
+  color: white;
 }
 .correct-button {
   margin-right: 20px;
 }
 .incorrect-button {
   margin-left: 20px;
+}
+
+@media all and (max-width: 800px) {
+
+/* WELCOME screen adaptive code */
+
+  .welcome-user-name p{
+    font-size: 30px;
+    margin-top: 100px;
+  }
+
+  .border{
+    border: 5px solid #F5CE28;
+  }
+
+  .welcome h1 {
+    font-size: 50px;
+  }
+
+  .welcome h2 {
+   top: 150px;
+   font-size: 16px;
+   line-height: 25px;
+  }
+
+  .auth-buttons {
+    top: 175px;
+  }
+
+  .auth-button-1 {
+    width: 130px;
+    height: 40px;
+    border-radius: 50px;
+    font-size: 22px;
+    letter-spacing: 1px;
+  }
+
+  .auth-button-2 {
+    width: 130px;
+    height: 40px;
+    border-radius: 50px;
+    font-size: 22px;
+    letter-spacing: 1px;
+  }
+
+
 }
