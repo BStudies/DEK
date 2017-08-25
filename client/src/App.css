@@ -865,11 +865,11 @@ textarea {
 }
 
 .right-wrong {
-  width: 20%;
-  height: 50px;
+  width: 70%;
+  height: 100px;
   margin: auto;
   position: relative;
-  top: 70px;
+  top: 50px;
   text-align: center;
 }
 .right-wrong button {
@@ -880,18 +880,46 @@ textarea {
   font-size: 30px;
   cursor: pointer;
 }
+
 .right-wrong button:hover {
   background: #F81B84;
   color: white;
 }
 .correct-button {
   margin-right: 20px;
+  margin-left: 20px;
 }
 .incorrect-button {
   margin-left: 20px;
 }
 
+.edit-redirect-button {
+  background: #f5ce28;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  font-size: 30px;
+  cursor: pointer;
+  padding: 12px 12px 12px 12px;
+}
+
 @media all and (max-width: 800px) {
+/* HEADER adaptive code */
+.header h1 {
+  padding-left: 10px;
+}
+.bars {
+  left: 70px;
+}
+.nav-dropdown{
+  top: 20px;
+  right: 19px;
+}
+
+/* MAIN screen adaptive code */
+  .menu-buttons {
+    width: 260px;
+  }
 
 /* WELCOME screen adaptive code */
 
@@ -933,6 +961,76 @@ textarea {
     font-size: 22px;
     letter-spacing: 1px;
   }
+
+/* MAIN screen adaptive code */
+.cards-container{
+  display: inherit;
+  width: 100%;
+  margin: 0;
+}
+.cards-container div {
+  width: 280px;
+  height: 390px;
+}
+.create-front{
+  margin-bottom: 40px;
+}
+.create-card{
+  height: auto;
+  padding-bottom: 11rem;
+}
+
+/* EDIT screen adaptive code */
+.cards-container-edit{
+  display: inherit;
+  width: 100%;
+  margin: 0;
+}
+.cards-container-edit div {
+  width: 280px;
+  height: 390px;
+}
+.create-front{
+  margin-bottom: 40px;
+}
+.create-card{
+  height: auto;
+  padding-bottom: 11rem;
+}
+.create-back-side-card form input:nth-child(2) {
+  height: 30px;
+  margin-top: 5px;
+}
+.delete-card {
+  height: 30px;
+  margin-top: 5px;
+}
+
+/* QUIZ screen adaptive code */
+.rotate_button {
+  top: -357px;
+}
+.edit_delete_icons {
+  width: 30% !important;
+  top: 265px;
+}
+
+
+
+
+
+/* PICK QUIZ screen adaptive code */
+.pickquiz-form {
+  flex-direction: column;
+  align-items: inherit;
+}
+.pickquiz-form a {
+  margin-bottom: 40px;
+}
+.pick-quiz-type{
+  height: auto;
+  padding-bottom: 11rem;
+}
 
 /*REGISTER responsive desing smaller screen*/
 
