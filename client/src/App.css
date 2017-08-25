@@ -67,6 +67,7 @@ body {
   margin:0;
   padding:0;
   height:100%;
+  font-family: 'Poppins', sans-serif;
 }
 input:focus,
 select:focus,
@@ -443,6 +444,11 @@ input::placeholder {
 }
 
 /*  ---------------- CREATE CARD PAGE (front) ---------------- */
+.create-card-quiz {
+  height: 100vh;
+  position: relative;
+  background: #43C0F6;
+}
 .create-card {
   height: 100vh;
   position: relative;
@@ -947,6 +953,10 @@ textarea {
   .menu-buttons {
     width: 260px;
   }
+/* ABOUT screen adaptive code */
+  .about-app-message p{
+    font-size: 15px;
+  }
 
 /* WELCOME screen adaptive code */
 
@@ -1045,6 +1055,10 @@ textarea {
   width: 280px;
 }
 
+/* SCORE screen adaptive code */
+.scoreScreen{
+  width: 85%;
+}
 
 
 
