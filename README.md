@@ -1,8 +1,10 @@
-# Group Project 3
+# Group Project 3 - DEK
 
 Team members: Brandon Hew, Briseida Montiel, Daniel Beebe, Ivan Alvarian
 
-[ADD SCREEN SHOT]
+![img1](./images/Welcome-page-shot.png)
+
+![img1](./images/Main-menu-shot.png)
 
 ## User Story
 'DEK' is an app which allows users to create their own unique stack of flash cards to aid in the learning process. This app can be used to learn a new language (foreign or programming) or any new subject which requires memorization.
@@ -19,21 +21,39 @@ When the user is reviewing flash cards, the user will view the front side of a f
 
 Each card can also be deleted, or edited and updated.
 
+DEK is deployed at:  https://dek-flashcards.herokuapp.com/
+
 ## Technologies
-[ADD TEXT]
+
+### React
+The App uses React for the front-end file structure and routing between pages.
+
+### Express
+The Express-Backend handles the requests that the front end sends. This happens via routing requests. 
+
+### Postgres/SQL
+The App uses database tables that each set a certain point of time in the future when the card should prompt again for the 'curated' quiz option. 
+
+### Auth
+The app uses auth for unique user registration/login.
 
 ### Sample Code
-[ADD CODE SNIPPETS]
+
+Here is the code in models/deck.js for filtering the flashcards for the 'curated quiz':
+
+    Deck.findByTime = (user_id, moment) => {
+        return db.query(`
+            SELECT * FROM deck
+            WHERE user_id=$1
+            AND 
+            (setTime < $2
+            OR correct=false)
+        `, [user_id, moment])
+    }
 
 ## Making of the App
-[ADD TEXT]
-
-### Wireframes
-[ADD IMAGES]
-
-### Challenges
-[ADD TEXT]
+DEK was a team effort. Brandon Hew played the role of our Git dictator, resolving code conflicts as each member submitted code (as well as fixing the team's bugs and errors along the way). Briseida Montiel worked primarily on the front-end design/CSS code. Daniel Beebe worked primarily on the React components and React routing/navigation through the App. Ivan Alvarian worked primarily on back-end, setting up the App's database and utilizing it in taking a quiz.
 
 ## Future Improvements
-[ADD TEXT]
+With additional time, we would like to improve this app by: (1) allowing the user to create multiple decks; and (2) add additional visual effects when the user takes a quiz.
 
