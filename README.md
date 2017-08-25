@@ -1,4 +1,4 @@
-# Group Project 3
+# Group Project 3 - DEK
 
 Team members: Brandon Hew, Briseida Montiel, Daniel Beebe, Ivan Alvarian
 
