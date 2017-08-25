@@ -38,10 +38,43 @@ The App uses database tables that each set a certain point of time in the future
 The app uses auth for unique user registration/login.
 
 ### Sample Code
-[ADD CODE SNIPPETS]
+
+Here is the code in client/src/App.js for routing/navigation through the App:
+
+    <Router>
+        <div className="App">
+          <div className="main">
+            <Route exact path="/" render={() => <Welcome />} />
+            <Route exact path="/aboutapp" render={() => <AboutApp />} />
+            <Route exact path="/main" render={() => <Main handleRedirect={this.handleRedirect} firstname={this.state.user.firstname}/>} />
+            <Route exact path="/register" render={() => <Register handleRegisterSubmit={this.handleRegisterSubmit} />} />
+            <Route exact path="/login" render={() => <Login handleLoginSubmit={this.handleLoginSubmit} />} />
+            <Route exact path="/userprofile" render={() => <UserProfile handleRedirect={this.handleRedirect} id={this.state.user.id} username={this.state.user.username} firstname={this.state.user.firstname} lastname={this.state.user.lastname} email={this.state.user.email}/>} />
+            <Route exact path="/createcard"  render={() => <CreateCard handleRedirect={this.handleRedirect} state={this.state} />} />
+            <Route exact path="/pickquiztype" component={PickQuizType} />
+            <Route exact path="/quizscreen" render={() => <QuizScreen handleRedirect={this.handleRedirect} state={this.state} />} />
+            <Route exact path="/curatedquizscreen" render={() => <CuratedQuizScreen handleRedirect={this.handleRedirect} state={this.state} />} />
+            <Route exact path="/editcards" render={() => <EditCards handleRedirect={this.handleRedirect} state={this.state} />} />
+            {this.redirectTo()}
+          </div>
+        </div>
+    </Router>
+
+
+Here is the code in models/deck.js for filtering the flashcards for the 'curated quiz':
+
+    Deck.findByTime = (user_id, moment) => {
+        return db.query(`
+            SELECT * FROM deck
+            WHERE user_id=$1
+            AND 
+            (setTime < $2
+            OR correct=false)
+        `, [user_id, moment])
+    }
 
 ## Making of the App
-[ADD TEXT]
+DEK was a team effort. Brandon Hew played the role of our Git dictator, resolving code conflicts as each member submitted code (as well as fixing the team's bugs and errors along the way). Briseida Montiel worked primarily on the front-end design/CSS code. Daniel Beebe worked primarily on the React components and React routing/navigation through the App. Ivan Alvarian worked primarily on back-end, setting up the App's database and utilizing it in taking a quiz.
 
 ## Future Improvements
 With additional time, we would like to improve this app by: (1) allowing the user to create multiple decks; and (2) add additional visual effects when the user takes a quiz.
