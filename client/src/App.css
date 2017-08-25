@@ -294,7 +294,7 @@ a:focus { text-decoration: none; color: inherit; }
   background: #F2EEE2;
 }
 input::placeholder {
-  color: #F2EEE2;
+  color: #f81b84;
 }
 /*  ---------------- LOG IN PAGE  ---------------- */
 .login-wrap {
@@ -695,8 +695,8 @@ textarea {
 }
 .quiz_question {
   text-align: center;
-  font-size: 26px;
-  line-height: 27px;
+  font-size: 20px;
+  line-height: 23px;
 }
 .quiz_answer {
   text-align: center;
@@ -991,7 +991,7 @@ textarea {
 
 /* MAIN screen adaptive code */
 .cards-container{
-  display: inherit;
+   display: inherit; 
   width: 100%;
   margin: 0;
 }
@@ -1040,6 +1040,9 @@ textarea {
 .edit_delete_icons {
   width: 30% !important;
   top: 265px;
+}
+.cards-container-quiz{
+  width: 280px;
 }
 
 

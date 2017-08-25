@@ -41,7 +41,7 @@ class FrontOfCard extends Component{
     render(){
         if(this.state.didMount){
             return(
-                <div>
+                <div className="quiz_back_card_container">
                     <div className="cards-container-quiz">
                         <div className="create-front-quiz">
                             <div className="create-front-side-card-quiz">
