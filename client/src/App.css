@@ -903,6 +903,11 @@ textarea {
   padding: 12px 12px 12px 12px;
 }
 
+.edit-redirect-button:hover {
+  background: #F81B84;
+  color: white;
+}
+
 @media all and (max-width: 800px) {
 /* HEADER adaptive code */
 .header h1 {
