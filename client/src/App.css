@@ -891,7 +891,7 @@ textarea {
   margin-left: 20px;
 }
 
-@media all and (max-width: 800px) {
+@media all and (max-width: 750px) {
 
 /* WELCOME screen adaptive code */
 
@@ -901,7 +901,7 @@ textarea {
   }
 
   .border{
-    border: 5px solid #F5CE28;
+    border: 0px solid #F5CE28;
   }
 
   .welcome h1 {
@@ -933,6 +933,10 @@ textarea {
     font-size: 22px;
     letter-spacing: 1px;
   }
+
+
+
+
 
 
 }
