@@ -891,7 +891,7 @@ textarea {
   margin-left: 20px;
 }
 
-@media all and (max-width: 750px) {
+@media all and (max-width: 800px) {
 
 /* WELCOME screen adaptive code */
 
@@ -934,9 +934,34 @@ textarea {
     letter-spacing: 1px;
   }
 
+/*REGISTER responsive desing smaller screen*/
 
+  .register-wrap {
+    top: 90px;
+    border-radius: 30px;
+    width: 70%;
+    height: 70%;
+  }
 
+  .register-wrap h1 {
+    font-size: 50px;
+    top: -30px;
+  }
 
+  .register-container form input {
+    margin-bottom: 20px;
+    height: 35px;
+    border-radius: 50px;
+    font-size: 14px;
+    letter-spacing: 1px;
+    padding-left: 10px;
+  }
+
+  .register-container form input:nth-child(6){
+    width: 100px;
+    margin: 0 auto;
+    padding-left: 0;
+  }
 
 
 }
