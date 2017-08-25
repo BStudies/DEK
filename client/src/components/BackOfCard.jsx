@@ -4,7 +4,6 @@ import moment from 'moment';
 import FontAwesome from 'react-fontawesome';
 
 
-
 class BackOfCard extends Component{
     constructor(){
         super();
