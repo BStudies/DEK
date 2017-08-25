@@ -42,9 +42,9 @@ class FrontOfCard extends Component{
         if(this.state.didMount){
             return(
                 <div>
-                    <div className="cards-container">
-                        <div className="create-front">
-                            <div className="create-front-side-card">
+                    <div className="cards-container-quiz">
+                        <div className="create-front-quiz">
+                            <div className="create-front-side-card-quiz">
                                 <div>
                                 <h1 className="quiz_question">{this.state.question}</h1>
                                 </div>

@@ -695,8 +695,8 @@ textarea {
 }
 .quiz_question {
   text-align: center;
-  font-size: 35px;
-  line-height: 35px;
+  font-size: 26px;
+  line-height: 27px;
 }
 .quiz_answer {
   text-align: center;
@@ -745,6 +745,33 @@ textarea {
 .fa-trash {
   padding-left: 10px;
   font-size: 25px;
+}
+.cards-container-quiz{
+  display: flex;
+  width: 60%;
+  margin: 0 auto;
+  position: relative;
+  top: 65px;
+}
+.create-front-quiz{
+  width: 310px;
+  height: 450px;
+  background: #F2EEE2;
+  margin: 0 auto;
+  border-radius: 25px;
+  position: relative;
+  top: 60px;
+  font-family: 'Poppins', sans-serif;
+}
+.create-front-side-card-quiz{
+  position: relative;
+  border: 1px solid lightslategrey;
+  height: 350px;
+  width: 240px;
+  overflow: scroll;
+  border-radius: 11px;
+  top: 68px;
+  margin: 0 auto;
 }
 
 
