@@ -29,7 +29,7 @@ footer, header, hgroup, menu, nav, section {
 	display: block;
 }
 body {
-	line-height: 1;
+  line-height: 1;
 }
 ol, ul {
 	list-style: none;
@@ -67,7 +67,7 @@ body {
   margin:0;
   padding:0;
   height:100%;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Karla', sans-serif;
 }
 input:focus,
 select:focus,
@@ -75,36 +75,24 @@ textarea:focus,
 button:focus {
   outline: none;
 }
-
+/* Remove forced yellow input background in Chrome to in this case #394cfe*/
+input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0px 1000px #394cfe inset !important;
+}
  input, button, submit { border:none; }
 a {text-decoration: none}
 a:visited { text-decoration: none; color: inherit;}
 a:focus { text-decoration: none; color: inherit; }
 /* a:hover, a:active { text-decoration: none; color:black } */
 
-/*  ---------------- HEADER  ---------------- */
-.header {
-  width: 100%;
-  height: 10vh;
-  min-height: 55px;
-  background: #F2EEE2;
-  display: flex;
-  position: fixed;
-  z-index: 9;
-}
-
-.header h1 {
+/*  ---------------- NAV  ---------------- */
+.nav-wrapper h1 {
   font-family: 'axisbold';
   font-size: 50px;
   letter-spacing: 5px;
   text-transform: uppercase;
-  flex: 1;
   padding-left: 50px;
   padding-top: 10px;
-}
-
-.header h1 a:hover {
-  color: #F81B84;
 }
 
 .bars {
@@ -129,7 +117,7 @@ a:focus { text-decoration: none; color: inherit; }
 .nav-link {
   display: none;
   padding-top: 15px;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Karla', sans-serif;
 }
 
 .nav:hover .nav-link {
@@ -157,10 +145,22 @@ a:focus { text-decoration: none; color: inherit; }
   text-transform: uppercase;
   letter-spacing: 3px;
   font-size: 10px;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Karla', sans-serif;
 }
 
 /*  ---------------- WELCOME PAGE  ---------------- */
+  .border{
+    color: #F7CA18;
+    border: 10px solid #F7CA18;
+    border-image: repeating-linear-gradient( 45deg, #394cfe, #394cfe 1%, #F7CA18 1%, #F7CA18 8%) 10;
+    height: 96vh;
+    width: 97%;
+    margin: 1%;
+    position: absolute;
+  }
+
+
+
 
 .welcome-message {
   width: 49%;
@@ -169,23 +169,13 @@ a:focus { text-decoration: none; color: inherit; }
 }
 
 .welcome-user-name p{
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Karla', sans-serif;
   font-size: 35px;
   margin-top: 150px;
 }
 
-.border{
-  color: #fec1fc;
-  border: 10px solid #F5CE28;
-  height: 93vh;
-  width: 96%;
-  margin: 1%;
-  position: absolute;
-}
-
 .welcome {
   text-align: center;
-  background-color: #F2EEE2;
   height: 100vh;
 }
 .welcome h1 {
@@ -200,7 +190,7 @@ a:focus { text-decoration: none; color: inherit; }
   position: relative;
   top: 150px;
   font-size: 21px;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Karla', sans-serif;
   color: black;
   letter-spacing: 1px;
   font-weight: 100;
@@ -212,60 +202,47 @@ a:focus { text-decoration: none; color: inherit; }
   width: 60%;
   margin: 0 auto;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
 }
 
-.auth-button-1 {
+.auth-button {
   width: 190px;
   height: 60px;
-  background: #f81b84;
+  background: #F7CA18;
   border-radius: 50px;
   font-size: 22px;
   letter-spacing: 1px;
   cursor: pointer;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Karla', sans-serif;
   font-weight: 700;
   color: white;
+  text-transform: capitalize;
 }
 
-.auth-button-2 {
-  width: 190px;
-  height: 60px;
-  background: #43C0F6;
-  border-radius: 50px;
-  font-size: 22px;
-  letter-spacing: 1px;
-  cursor: pointer;
-  font-family: 'Poppins', sans-serif;
-  font-weight: 700;
+.auth-buttons button:hover,
+.auth-buttons button:focus {
+  background: #394cfe;
   color: white;
-}
-
-.auth-buttons button:hover {
-  background: #f5ce28;
-  color: black;
 }
 
 /*  ---------------- REGISTER PAGE  ---------------- */
 .register-wrap {
   width: 45%;
   height: 65%;
-  background: #43C0F6;
+  background: #394cfe;
   margin: 0 auto;
   position: relative;
   top: 111px;
-  border-radius: 30px;
 }
 .register-wrap h1 {
   font-size: 100px;
   text-align: center;
   position: relative;
   top: -37px;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Karla', sans-serif;
 }
 .register-container {
   height: 100vh;
-  background: #F2EEE2;
 }
 .register-container form {
   width: 55%;
@@ -279,44 +256,44 @@ a:focus { text-decoration: none; color: inherit; }
   border-radius: 50px;
   font-size: 16px;
   letter-spacing: 1px;
-  font-family: 'Poppins', sans-serif;
-  padding-left: 25px;
+  font-family: 'Karla', sans-serif;
 }
-.register-container form input:nth-child(6){
-  width: 100px;
+
+.form-submit {
+  background: #F7CA18;
+  width: 160px;
   margin: 0 auto;
   padding-left: 0;
-  background: #F81B84;
-  color: black;
-  cursor: pointer;
-  font-weight: 600;
+  border-radius: 30px;
+  color: #000;
+  text-transform: capitalize;
+  font-size: 20px;
+  padding: 0;
 }
-.register-container form input:nth-child(6):hover{
-  background: #F2EEE2;
+.form-submit:hover,
+.form-submit:focus{
+  background: #394cfe;
+  color: white;
 }
-input::placeholder {
-  color: #f81b84;
-}
+
 /*  ---------------- LOG IN PAGE  ---------------- */
 .login-wrap {
   width: 45%;
   height: 45%;
-  background: #43C0F6;
+  background: #394cfe;
   margin: 0 auto;
   position: relative;
   top: 111px;
-  border-radius: 30px;
 }
 .login-wrap h1 {
   font-size: 100px;
   text-align: center;
   position: relative;
   top: -37px;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Karla', sans-serif;
 }
 .login-container {
   height: 100vh;
-  background-color: #F2EEE2;
 }
 .login-container form {
   width: 55%;
@@ -331,27 +308,19 @@ input::placeholder {
   border-radius: 50px;
   font-size: 16px;
   letter-spacing: 1px;
-  font-family: 'Poppins', sans-serif;
-  padding-left: 25px;
-}
-.login-container form input:nth-child(3){
-  width: 100px;
-  margin: 0 auto;
-  padding-left: 0;
-  background: #f81b84;
-  color: black;
-  cursor: pointer;
-  font-weight: 600;
-}
-.login-container form input:nth-child(3):hover {
-  background: white;
+  font-family: 'Karla', sans-serif;
 }
 
 /*  ---------------- MAIN PAGE  ---------------- */
 .main-menu {
   height: 100vh;
   position: relative;
-  background-color: #43C0F6;
+}
+.main-menu h1 {
+  text-align: center;
+  padding-top: 150px;
+  font-size: 50px;
+
 }
 .welcome-user-name {
   display: flex;
@@ -359,7 +328,7 @@ input::placeholder {
   font-size: 25px;
   justify-content: center;
   align-items: center;
-  background-color: #43C0F6;
+  /* background-color: #43C0F6; */
 }
 
 .menu-buttons{
@@ -371,93 +340,60 @@ input::placeholder {
   justify-content: space-around;
   position: relative;
   top: 90px;
-  background-color: #43C0F6;
+  /* background-color: #43C0F6; */
 }
 .menu-button{
-  background: #F81B84;
+  background: #F7CA18;
   flex: 250px 0;
   border-radius: 15px;
   height: 85px;
   cursor: pointer;
   font-size: 25px;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Karla', sans-serif;
   font-weight: 600;
   letter-spacing: 2px;
-  color: #F2EEE2;
+  color: white;
+  text-transform: capitalize;
 }
 
 .menu-button:hover {
-   background: #F2EEE2;
-   color: #F81B84;
+   background: #394cfe;
 }
-
-.menu-button-edit{
-  background: #F5CE28;
-  flex: 250px 0;
-  border-radius: 15px;
-  height: 85px;
-  cursor: pointer;
-  font-size: 25px;
-  font-family: 'Poppins', sans-serif;
-  font-weight: 600;
-  letter-spacing: 2px;
-  color: #F2EEE2;
-}
-
-.menu-button-edit:hover {
-   background: #F2EEE2;
-   color: #F5CE28;
+.menu-button:focus{
+  background: #F7CA18;
 }
 
 
 /*  ---------------- ABOUT APP PAGE ---------------- */
-
-.about-app {
-  height: 100vh;
+.about {
   position: relative;
-  background-color: #43C0F6;
+  top: 50px;
 }
-.about-app-message {
-  top: 20vh;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  max-width: 500px;
-  position: relative;
-  height: 350px;
-  border: 10px solid #F5CE28;
-  margin: 0 auto;
-  text-align: center;
-  background-color: #F2EEE2;
+.about-headline {
+  font-size: 50px;
+  margin-bottom: 40px;
+}
+.about p {
+  font-size: 23px;
+  line-height: 30px;
+}
+.first-p {
+  text-align: right;
 }
 
-.about-app-message h2 {
-  font-family: 'Poppins', sans-serif;
-  font-size: 30px;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  padding-top: 10px;
-  padding-bottom: 10px;
-}
 
-.about-app-message p {
-  font-family: 'Poppins', sans-serif;
-  padding: 5px 5px 5px 5px;
-  font-size: 18px;
-}
 
 /*  ---------------- CREATE CARD PAGE (front) ---------------- */
 
 .create-card-quiz {
   height: 100vh;
   position: relative;
-  background: #43C0F6;
+  /* background: #43C0F6; */
 }
 
 .create-card {
   height: 100vh;
-  background: #43C0F6;
+  /* background: #43C0F6; */
 }
 
 .cards-container {
@@ -465,34 +401,34 @@ input::placeholder {
   width: 85%;
   margin: 0 auto;
   position: relative;
-  top: 65px;
+  top: 35px;
 }
 .create-card h2 {
   text-align: center;
-  top: 90px;
+  top: 60px;
   font-size: 30px;
   position: relative;
   text-transform: uppercase;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Karla', sans-serif;
   font-weight: 600;
   letter-spacing: 2px;
 }
 
 .create-card > p{
   text-align: center;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Karla', sans-serif;
   position: relative;
   top: 95px;
 }
 .create-front{
   width: 310px;
   height: 450px;
-  background: #F2EEE2;
   margin: 0 auto;
   border-radius: 25px;
   position: relative;
   top: 60px;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Karla', sans-serif;
+  background: #ECF0F1;
 }
 .create-front-side-card{
   position: relative;
@@ -514,7 +450,7 @@ input::placeholder {
   border-radius: 15px;
   margin-top: 30px;
   font-size: 20px;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Karla', sans-serif;
 }
 .create-front-side-card form input:nth-child(2){
   width: 80px;
@@ -524,7 +460,7 @@ input::placeholder {
   font-size: 20px;
   letter-spacing: 1px;
   margin-top: 20px;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Karla', sans-serif;
   cursor: pointer;
   background: black;
   color: white;
@@ -534,12 +470,12 @@ input::placeholder {
 .create-back {
   width: 310px;
   height: 450px;
-  background: #F2EEE2;
   margin: 0 auto;
   border-radius: 25px;
   position: relative;
   top: 60px;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Karla', sans-serif;
+  background: #ECF0F1;
 }
 .create-back-side-card{
   position: relative;
@@ -555,16 +491,19 @@ input::placeholder {
   flex-direction: column;
 }
 textarea {
-  width: 185px;
+  width: 225px;
   margin: 0 auto;
-  height: 215px;
+  height: 265px;
   border-radius: 15px;
   margin-top: 30px;
-  font-size: 15px;
-  font-family: 'Poppins', sans-serif;
+  font-size: 25px;
+  text-align: center;
+  padding-top: 20px;
+  font-family: 'Karla', sans-serif;
   border: none;
   padding-left: 21px;
   padding-right: 21px;
+  background-color: white;
 }
 .create-back-side-card form input:nth-child(2){
   width: 80px;
@@ -574,15 +513,14 @@ textarea {
   font-size: 20px;
   letter-spacing: 1px;
   margin-top: 20px;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Karla', sans-serif;
   cursor: pointer;
-  background: #F81B84;
+  background: #F7CA18;
   color: white;
+  font-weight: 600;
 }
 .create-back-side-card form input:nth-child(2):hover {
-  background: #F5CE28;
-  color: black;
-  font-weight: 600;
+  background: #394cfe;
 }
 
 
@@ -590,7 +528,7 @@ textarea {
 .user-profile{
   height: 100vh;
   position: relative;
-  background-color: #43C0F6;
+  /* background-color: #43C0F6; */
 }
 .user-profile-info {
   top: 20vh;
@@ -600,13 +538,13 @@ textarea {
   max-width: 500px;
   position: relative;
   height: 350px;
-  border: 10px solid #F5CE28;
   margin: 0 auto;
   text-align: center;
-  background-color: #F2EEE2;
+  border: 10px solid #F7CA18;
+  border-image: repeating-linear-gradient( 45deg, #394cfe, #394cfe 1%, #F7CA18 1%, #F7CA18 8%) 10;
 }
 .user-profile-info h2 {
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Karla', sans-serif;
   font-size: 30px;
   font-weight: 600;
   text-transform: uppercase;
@@ -615,7 +553,7 @@ textarea {
   padding-bottom: 10px;
 }
 .user-profile-info h3 {
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Karla', sans-serif;
   padding-bottom: 5px;
   font-size: 18px;
 }
@@ -624,22 +562,22 @@ textarea {
 .pick-quiz-type {
   height: 100vh;
   position: relative;
-  background: #46bff7;
+  /* background: #46bff7; */
 }
 .pick-quiz-type h2{
   text-align: center;
-  top: 115px;
+  top: 65px;
   font-size: 30px;
   position: relative;
   text-transform: uppercase;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Karla', sans-serif;
   font-weight: 600;
   letter-spacing: 2px;
 }
 .pickquiz-form{
   display: flex;
   position: relative;
-  top: 165px;
+  top: 125px;
   justify-content: center;
   align-items: center;
   padding: 0 5vw 0 5vw;
@@ -649,10 +587,10 @@ textarea {
   flex: 50% 0;
   height: 50vh;
   cursor: pointer;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Karla', sans-serif;
   color: white;
   text-align: center;
-  background: #f81b84;
+  background: #F7CA18;
   justify-content: center;
   margin: 0 5vw 0 5vw;
   border-radius: 40px;
@@ -662,10 +600,10 @@ textarea {
   flex: 50% 0;
   height: 50vh;
   cursor: pointer;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Karla', sans-serif;
   color: white;
   text-align: center;
-  background: #F5CE28;
+  background: #394cfe;
   margin: 0 5vw 0 5vw;
   border-radius: 40px;
 }
@@ -692,32 +630,32 @@ textarea {
 }
 
 .pickquiz-button-one:hover {
-  background-color: #f2EEE2;
+  background-color: #394cfe;
 }
 
 .pickquiz-button-one:hover p {
-  color: #F81B84;
+  color: #F7CA18;
 }
 
 .pickquiz-button-two:hover {
-  background: #f2EEE2;
+  background: #F7CA18;
 }
 
 .pickquiz-button-two:hover p {
-  color: #F5CE28;
+  color: #394cfe;
 }
 .quiz_question {
   text-align: center;
-  font-size: 20px;
-  line-height: 23px;
+  font-size: 35px;
+  line-height: 40px;
 }
 .quiz_answer {
   text-align: center;
-  font-size: 20px;
+  font-size: 28px;
   line-height: 26px;
 }
 .quiz_back_card{
-  border: 1px solid lightslategrey;
+  border: 1px solid transparent;
   height: 350px;
   width: 240px;
   overflow: scroll;
@@ -735,7 +673,7 @@ textarea {
   text-align: center;
 }
 .scoreScreen h1 {
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Karla', sans-serif;
   font-size: 40px;
 }
 .scoreScreen h1:nth-child(1){
@@ -751,10 +689,7 @@ textarea {
   top: 285px;
   color: #f81b84;
 }
-.fa-pencil {
-  padding-right: 10px;
-  font-size: 25px;
-}
+
 .fa-trash {
   padding-left: 10px;
   font-size: 25px;
@@ -769,16 +704,16 @@ textarea {
 .create-front-quiz{
   width: 310px;
   height: 450px;
-  background: #F2EEE2;
   margin: 0 auto;
   border-radius: 25px;
   position: relative;
-  top: 60px;
-  font-family: 'Poppins', sans-serif;
+  top: 40px;
+  font-family: 'Karla', sans-serif;
+  background: #ECF0F1;
 }
 .create-front-side-card-quiz{
   position: relative;
-  border: 1px solid lightslategrey;
+  border: 1px solid transparent;
   height: 350px;
   width: 240px;
   overflow: scroll;
@@ -793,7 +728,7 @@ textarea {
 .edit-screen {
   position: relative;
   padding-bottom: 9rem;
-  background: #43C0F6;
+  /* background: #43C0F6; */
 }
 .no-message {
   height: 100vh;
@@ -810,7 +745,7 @@ textarea {
   text-align: center;
 }
 .no-cards-container h1 {
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Karla', sans-serif;
   font-weight: 600;
   position: relative;
   top: 200px;
@@ -825,7 +760,7 @@ textarea {
   font-size: 60px;
 }
 .edit-cards-main_no_cards h1 {
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Karla', sans-serif;
   font-weight: 600;
   position: relative;
   top: 200px;
@@ -833,11 +768,11 @@ textarea {
 }
 .edit-screen h2 {
   text-align: center;
-  top: 115px;
+  top: 55px;
   font-size: 30px;
   position: relative;
   text-transform: uppercase;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Karla', sans-serif;
   font-weight: 600;
   letter-spacing: 2px;
   padding-bottom: 30px;
@@ -848,7 +783,7 @@ textarea {
   margin: 0 auto;
   position: relative;
   top: 65px;
-  padding-bottom: 50px;
+  padding-bottom: 90px;
 }
 
 .delete-card {
@@ -859,16 +794,15 @@ textarea {
   font-size: 20px;
   letter-spacing: 1px;
   margin-top: 10px;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Karla', sans-serif;
   cursor: pointer;
-  background: #F81B84;
+  background: #394cfe;
   color: white;
+  font-weight: 600;
 }
 
 .delete-card:hover {
-  background: #F5CE28;
-  color: black;
-  font-weight: 600;
+  background: #F7CA18;
 }
 
 /*  ---------------- QUIZ SCREEN PAGE ---------------- */
@@ -880,12 +814,12 @@ textarea {
   font-size: 18px;
   letter-spacing: 1px;
   margin-top: 20px;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Karla', sans-serif;
   cursor: pointer;
   background: #f5ce28;
   color: black;
   position: relative;
-  top: -397px;
+  top: -437px;
   display: block;
 }
 
@@ -896,12 +830,11 @@ textarea {
   align-items: center;
   width: 310px;
   height: 450px;
-  background: #F2EEE2;
   margin: 0 auto;
   border-radius: 25px;
   position: relative;
-  font-family: 'Poppins', sans-serif;
-  margin-top: 10vh;
+  font-family: 'Karla', sans-serif;
+  background: #ECF0F1;
 }
 
 .right-wrong {
@@ -922,7 +855,7 @@ textarea {
 }
 
 .right-wrong button:hover {
-  background: #F81B84;
+  background: #394cfe;
   color: white;
 }
 .correct-button {
@@ -933,19 +866,80 @@ textarea {
   margin-left: 20px;
 }
 
-.edit-redirect-button {
-  background: #f5ce28;
-  width: 80px;
-  height: 80px;
-  border-radius: 50%;
-  font-size: 30px;
-  cursor: pointer;
-  padding: 12px 12px 12px 12px;
+.edit-redirect-button:hover {
+  background: #394cfe;
+  color: white;
 }
 
-.edit-redirect-button:hover {
-  background: #F81B84;
+
+/*************************   MATERIALIZE.CSS OVERWRITES   **************************/
+/*  ---------------- NAV  ---------------- */
+nav, nav .nav-wrapper i, nav a.button-collapse, nav a.button-collapse i {
+  float: right !important;
+  font-size: 2.1rem;
+}
+nav .nav-wrapper {
+  background: #394cfe;
+}
+.side-nav {
+  background: #F7CA18;
+  padding-top: 50px;
+}
+.side-nav li>a {
   color: white;
+  font-size: 35px;
+  height: 78px;
+  line-height: 78px;
+  padding-bottom: 30px;
+  padding-left: 40px;
+}
+.side-nav li>a:hover {
+  background: #394cfe;
+}
+
+/*  ---------------- REGISTER & LOGIN PAGES  ---------------- */
+input::placeholder {
+  color: white;
+}
+input[type=text]:not(.browser-default):focus:not([readonly]),
+input[type=email]:not(.browser-default):focus:not([readonly]),
+input[type=password]:not(.browser-default):focus:not([readonly]){
+  border-bottom: 1px solid #F7CA18;
+  -webkit-box-shadow: 0 1px 0 0 #F7CA18;
+  box-shadow: 0 1px 0 0 #F7CA18;
+}
+
+
+
+/* ----------- Laptops ----------- */
+@media all and (min-width: 1200px) and (max-width: 1600px) 
+and (-webkit-min-device-pixel-ratio: 1) { 
+
+.card-tag {
+  width: 309px;
+  height: 449px;
+  background: #ecf0f1;
+  border-radius: 30px;
+  position: absolute;
+  z-index: 9;
+  transform: rotate(35deg);
+  box-shadow: 0.8rem 0.1rem 2rem rgba(0,0,0,0.2);
+  top: -205px;
+  left: 135px;
+}
+.card-tag-two{
+  width: 309px;
+  height: 449px;
+  background: #ecf0f1;
+  border-radius: 30px;
+  position: absolute;
+  z-index: 9;
+  transform: rotate(-30deg);
+  box-shadow: 2.2rem 0.4rem 4.8rem rgba(0,0,0,0.4);
+  top: 135px;
+  right: -109px;
+}
+
 }
 
 
@@ -968,49 +962,51 @@ textarea {
     width: 260px;
   }
 /* ABOUT screen adaptive code */
-  .about-app-message p{
-    font-size: 15px;
+  .about p {
+    font-size: 19px;
+    line-height: 25px;
+  }
+  .first-p{
+    text-align: left;
+    padding-bottom: 20px;
   }
 
 /* WELCOME screen adaptive code */
-
+  .border {
+    height: 95vh;
+    width: 92%;
+    margin: 4%;
+  }
+  .welcome-message {
+    width: 70%;
+  }
   .welcome-user-name p{
     font-size: 30px;
     margin-top: 100px;
   }
 
-  .border{
-    border: 0px solid #F5CE28;
-  }
 
   .welcome h1 {
-    font-size: 50px;
+    font-size: 70px;
   }
 
   .welcome h2 {
-   top: 150px;
-   font-size: 16px;
-   line-height: 25px;
+   top: 90px;
+   font-size: 22px;
+   line-height: 26px;
   }
 
   .auth-buttons {
-    top: 175px;
+    top: 105px;
+    flex-direction: column;
   }
-
-  .auth-button-1 {
-    width: 130px;
-    height: 40px;
-    border-radius: 50px;
-    font-size: 22px;
-    letter-spacing: 1px;
+  .auth-button:nth-child(1){
+    margin-bottom: 15px;
   }
-
-  .auth-button-2 {
+  .auth-button{
     width: 130px;
-    height: 40px;
-    border-radius: 50px;
-    font-size: 22px;
-    letter-spacing: 1px;
+    height: 50px;
+    font-size: 15px;
   }
 
 /* MAIN screen adaptive code */

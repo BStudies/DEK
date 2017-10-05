@@ -2,11 +2,17 @@ import React from 'react';
 import {Link} from 'react-router-dom';
 
 const Welcome = () => {
-
+  const imgCard1 = {
+    backgroundImage: 'url(../img/deck-card-2.png)',
+  };
+  const imgCard2 = {
+    backgroundImage: 'url(../img/deck-card-1.png)',
+  };
+  
   return (
       <div className="white-border">
-        <div className="card-tag"></div>
-        <div className="card-tag-two"></div>
+        <div style={imgCard1} className="card-tag"></div>
+        <div style={imgCard2} className="card-tag-two"></div>
         <div className="border"></div>
         <div className='welcome'>
 
@@ -16,8 +22,8 @@ const Welcome = () => {
           </div>
 
           <div className='auth-buttons'>
-            <Link to="/register"><button className="auth-button-1">Sign Up</button></Link>
-            <Link to="/login"><button className="auth-button-2">Log In</button></Link>
+            <Link to="/register"><button className="auth-button waves-effect waves-light btn-large">Sign Up</button></Link>
+            <Link to="/login"><button className="auth-button waves-effect waves-light btn-large">Log In</button></Link>
           </div>
 
         </div>
